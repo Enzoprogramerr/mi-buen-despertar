@@ -1,0 +1,284 @@
+body {
+  font-family: Roboto !important;
+}
+
+.cont_principal {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e2cf85;
+}
+
+.header {
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+  padding: 0.5rem;
+}
+
+.navbar-button.active {
+  padding: 0;
+}
+
+.header .logo_img {
+  image-rendering: auto;
+  object-fit: contain;
+  height: 5rem;
+  min-height: 3rem;
+  width: 5rem;
+  min-width: 3rem;
+}
+
+.cont_inicio {
+  position: relative;
+  height: 100%;
+}
+
+.navbar {
+  max-width: 0;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  transition: max-width 0.3s linear;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inicio {
+  transition: opacity 0.3s linear;
+  background-color: #e2cf85;
+}
+
+.inicio.active {
+  opacity: 0.1;
+}
+
+.navbar.active {
+  max-width: 50%;
+}
+
+.navbar-ul {
+  list-style-type: none;
+  padding: 0;
+  width: fit-content;
+}
+
+.navbar-li {
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar-a {
+  color: white;
+}
+
+.navbar-a:hover {
+  cursor: pointer;
+}
+
+.navbar-a {
+  text-decoration: none;
+}
+
+.hamburger {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: black;
+}
+
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+
+.checkbox:checked + svg .line {
+  stroke: crimson;
+}
+
+.checkbox:checked + svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+
+.checkbox:checked + svg .lineMid {
+  stroke-dashoffset: 40;
+}
+
+.checkbox:checked + svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+body .no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.inicio-container {
+  background-image: url("/public/images/Galeria/pileta_hero.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /*oscurece un poco la imagen */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.inicio-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.inicio-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.inicio-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.inicio-boton {
+  background-color: #ffcc70;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.map-section {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.map-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #6d3918;
+  margin: 1rem 0;
+}
+
+.map {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
+    box-shadow 1s ease-in-out;
+  border-radius: 0.5rem;
+  box-shadow: none;
+}
+
+.map.visible {
+  height: 13rem;
+  width: 90%;
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.carousel {
+  overflow-x: auto;
+  max-width: 100vw;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carrousel_conten {
+  padding-top: 1rem;
+}
+
+.carousel-img {
+  width: 100vw;
+  height: 350px;
+  object-fit: cover;
+}
+
+.experiencias h2 {
+  padding-top: 3rem;
+}
+
+.lista-actividades {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.lista-actividades li {
+  background: #fff;
+  border-left: 5px solid #ab7c5b;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lista-actividades h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #4b3a2f;
+}
+
+.lista-actividades p {
+  font-size: 0.95rem;
+  color: #3f3f3f;
+}
+
+.experiencias {
+  height: auto;
+  min-height: 100vh; /* Asegura espacio suficiente para que se vea bien */
+  overflow: visible;
+  padding-bottom: 2rem; /* Por si el último <li> está muy cerca del borde */
+}
+
+@media screen and (min-width: 481px) {
+  .navbar-button {
+    display: none;
+  }
+}
