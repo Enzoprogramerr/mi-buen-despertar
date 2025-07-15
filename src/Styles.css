@@ -1,3 +1,23 @@
+:root {
+  /* Espaciados */
+  --space-xs: 0.5rem; /* 5px - separaciones mínimas */
+  --space-sm: 1rem; /* 10px - padding estándar */
+  --space-md: 1.5rem; /* 15px - espacios entre secciones */
+  --space-lg: 2rem; /* 20px - márgenes amplios */
+  --space-xl: 3rem; /* 30px - separaciones importantes */
+  --space-xxl: 4rem; /* 40px - hero section, fondo de secciones */
+
+  /* Tipografía */
+  --font-base: 1.6rem; /* 16px - texto regular */
+  --font-small: 1.2rem; /* 12px - detalles secundarios */
+  --font-large: 2.4rem; /* 24px - subtítulos */
+  --font-title: 3.6rem; /* 36px - títulos principales */
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: Roboto !important;
 }
@@ -65,6 +85,7 @@ body {
   list-style-type: none;
   padding: 0;
   width: fit-content;
+  font-size: var(--font-base);
 }
 
 .navbar-li {
@@ -85,8 +106,8 @@ body {
 }
 
 .hamburger {
-  height: 50px;
-  width: 50px;
+  height: 3.6rem;
+  width: 3.6rem;
   position: relative;
 }
 
@@ -145,10 +166,10 @@ body .no-scroll {
 }
 
 .inicio-container {
-  background-image: url("/public/images/Galeria/pileta_hero.webp");
+  background-image: url("/public/images/Galeria/pileta_hero_mobile.webp");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 70vh;
   color: white;
   position: relative;
   display: flex;
@@ -165,17 +186,17 @@ body .no-scroll {
 }
 
 .inicio-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 .inicio-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
 .inicio-text {
-  font-size: 1rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 
@@ -187,6 +208,7 @@ body .no-scroll {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1.6rem;
 }
 
 .map-section {
@@ -195,11 +217,12 @@ body .no-scroll {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding: var(--space-md);
 }
 
 .map-title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: var(--font-title);
   color: #6d3918;
   margin: 1rem 0;
 }
@@ -214,7 +237,7 @@ body .no-scroll {
 }
 
 .map.visible {
-  height: 13rem;
+  height: 20rem;
   width: 90%;
   opacity: 1;
   transform: translateY(0);
@@ -239,8 +262,15 @@ body .no-scroll {
   object-fit: cover;
 }
 
+.experiencias {
+  height: 113rem;
+  padding: var(--space-md) 0;
+}
+
 .experiencias h2 {
   padding-top: 3rem;
+  font-size: var(--font-title);
+  color: #6d3918;
 }
 
 .lista-actividades {
@@ -261,20 +291,13 @@ body .no-scroll {
 
 .lista-actividades h3 {
   margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: var(--font-large);
   color: #4b3a2f;
 }
 
 .lista-actividades p {
-  font-size: 0.95rem;
+  font-size: var(--font-base);
   color: #3f3f3f;
-}
-
-.experiencias {
-  height: auto;
-  min-height: 100vh; /* Asegura espacio suficiente para que se vea bien */
-  overflow: visible;
-  padding-bottom: 2rem; /* Por si el último <li> está muy cerca del borde */
 }
 
 @media screen and (min-width: 481px) {
