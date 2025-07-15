@@ -117,6 +117,11 @@ export function Inicio(props: InicioProps) {
             </li>
           </ul>
         </section>
+        <img
+          className="wp-icon"
+          src="/public/images/whatsapp.svg"
+          alt="Whatsapp"
+        />
       </div>
     </>
   );
