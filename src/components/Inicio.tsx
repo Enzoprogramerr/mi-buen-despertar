@@ -28,19 +28,19 @@ export function Inicio(props: InicioProps) {
   const images = [
     {
       key: 1,
-      src: "/public/images/Galeria/patio_mobile(webp).webp",
+      src: "/public/images/Galeria/patio_completa_mobile.webp",
       alt: "Vista patio completa",
       loading: "lazy",
     },
     {
       key: 2,
-      src: "/public/images/Galeria/casa_frente_1.2.webp",
+      src: "/public/images/Galeria/casa_frente_mobile.webp",
       alt: "Vista de casa",
       loading: "lazy",
     },
     {
       key: 3,
-      src: "/public/images/Galeria/pileta_depto.webp",
+      src: "/public/images/Galeria/depto_frente.webp",
       alt: "Pileta con vista a departamento",
       loading: "lazy",
     },
@@ -77,51 +77,56 @@ export function Inicio(props: InicioProps) {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </section>
-        <section className="experiencias">
-          <h2>¿Qué podés hacer en Cura Brochero?</h2>
-          <ul className="lista-actividades">
-            <li>
-              <h3>🌊 Balnearios naturales</h3>
-              <p>
-                Ríos cristalinos como Los Elefantes y El Perchel para relajarte
-                y disfrutar del paisaje serrano.
-              </p>
-            </li>
-            <li>
-              <h3>🕍 Historia y cultura</h3>
-              <p>
-                Visitá el Santuario del Cura Brochero y conocé su legado en la
-                Casa Museo y Parque Temático.
-              </p>
-            </li>
-            <li>
-              <h3>🥾 Senderismo y cabalgatas</h3>
-              <p>
-                Recorré los senderos serranos a pie o a caballo, ideales para
-                conectar con la naturaleza.
-              </p>
-            </li>
-            <li>
-              <h3>🎶 Peñas y gastronomía</h3>
-              <p>
-                Viví la cultura local con música folclórica, cabrito a la llama
-                y dulces típicos.
-              </p>
-            </li>
-            <li>
-              <h3>🦅 Excursiones cercanas</h3>
-              <p>
-                Conocé el Museo Rocsen, el Dique La Viña o el Parque Quebrada
-                del Condorito.
-              </p>
-            </li>
-          </ul>
-        </section>
-        <img
-          className="wp-icon"
-          src="/public/images/whatsapp.svg"
-          alt="Whatsapp"
-        />
+        {
+          <section className="experiencias">
+            <h2>¿Qué podés hacer en Cura Brochero?</h2>
+            <ul className="lista-actividades">
+              <li>
+                <h3>🌊 Balnearios naturales</h3>
+                <p>
+                  Ríos cristalinos como Los Elefantes y El Perchel para
+                  relajarte y disfrutar del paisaje serrano.
+                </p>
+              </li>
+              <li>
+                <h3>🕍 Historia y cultura</h3>
+                <p>
+                  Visitá el Santuario del Cura Brochero y conocé su legado en la
+                  Casa Museo y Parque Temático.
+                </p>
+              </li>
+              <li>
+                <h3>🥾 Senderismo y cabalgatas</h3>
+                <p>
+                  Recorré los senderos serranos a pie o a caballo, ideales para
+                  conectar con la naturaleza.
+                </p>
+              </li>
+              <li>
+                <h3>🎶 Peñas y gastronomía</h3>
+                <p>
+                  Viví la cultura local con música folclórica, cabrito a la
+                  llama y dulces típicos.
+                </p>
+              </li>
+              <li>
+                <h3>🦅 Excursiones cercanas</h3>
+                <p>
+                  Conocé el Museo Rocsen, el Dique La Viña o el Parque Quebrada
+                  del Condorito.
+                </p>
+              </li>
+            </ul>
+          </section>
+        }
+        <div className="wp-div">
+          <p>¿Dudas? Contáctenos...</p>
+          <img
+            className="wp-icon"
+            src="/public/images/whatsapp.svg"
+            alt="Whatsapp"
+          />
+        </div>
       </div>
     </>
   );
