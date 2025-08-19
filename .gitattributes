@@ -1,0 +1,28 @@
+# Normalizar saltos de línea para todos los archivos de texto
+* text=auto eol=lf
+
+
+# Asegurar que los archivos de código usen LF (más estándar en proyectos multiplataforma)
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Archivos binarios (no tocar saltos de línea)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.webp binary
+*.mp4 binary
+*.mp3 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
