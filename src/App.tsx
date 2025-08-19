@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Navbar } from "./components/Nav";
 import { Inicio } from "./components/Inicio";
 import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-
 /* import { useEffect } from "react"; */
 
 import "./Styles.css";
@@ -25,10 +23,9 @@ function App() {
       <div className="cont_principal">
         <Header menu={menu} setMenu={setMenu}></Header>
         <div className="cont_inicio">
-          <Navbar menu={menu}></Navbar>
           <Inicio menu={menu}></Inicio>
+          <Navbar menu={menu}></Navbar>
         </div>
-        <Footer></Footer>
       </div>
     </>
   );
