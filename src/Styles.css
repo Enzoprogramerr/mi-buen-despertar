@@ -331,18 +331,22 @@ body {
   margin: 1rem;
 }
 
-.social-links {
+.footer {
+  background-color: #dd6519;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  padding: 2rem;
-  text-align: center;
-  background-color: #6d3918;
-  border-top: 1px solid #ddd;
-  gap: 1.5rem;
+  align-items: center;
+  padding: var(--space-md);
+  font-size: var(--font-base);
 }
 
-.social-links .social-icon {
+.footer_social {
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.social-icon {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -351,6 +355,14 @@ body {
   color: white;
   text-decoration: none;
   font-size: var(--font-base);
+}
+
+.footer_social a {
+  padding: var(--space-lg) 0;
+}
+
+.footer__brand h4 {
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 481px) {
