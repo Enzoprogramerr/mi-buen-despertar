@@ -61,6 +61,9 @@ export function Inicio({ menu }: InicioProps) {
             <button className="inicio-boton">Consultar disponibilidad</button>
           </div>
         </section>
+        <div className="subtitle">
+          <h2>Un adelanto de tu estadía</h2>
+        </div>
         <section className="galery">
           <Carousel_img images={images} />
         </section>
