@@ -5,9 +5,7 @@ interface InicioProps {
   menu: boolean;
 }
 
-export function Inicio(props: InicioProps) {
-  const { menu } = props;
-
+export function Inicio({ menu }: InicioProps) {
   const mapRef = useRef<HTMLIFrameElement | null>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(

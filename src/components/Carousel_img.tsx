@@ -5,7 +5,7 @@ interface CarouselProps {
   images: { src: string; alt: string; key: number; loading: string }[];
 }
 
-export const Carousel_img: React.FC<CarouselProps> = ({ images }) => {
+export function Carousel_img({ images }: CarouselProps) {
   return (
     <Carousel
       className="carousel"
@@ -23,4 +23,4 @@ export const Carousel_img: React.FC<CarouselProps> = ({ images }) => {
       ))}
     </Carousel>
   );
-};
+}
