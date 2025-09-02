@@ -370,8 +370,38 @@ body {
   font-size: 1.8rem;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .navbar-button {
     display: none;
   }
+  .cont_principal {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logo_img {
+    object-fit: contain;
+  }
+
+  .header-desk {
+    height: clamp(4rem, 10vh, 8rem);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ul-header-desk {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin: 2rem;
+  }
+  /* 
+TODO-3 Darle otro aspecto al icono de la pagina.
+TODO-4 Achicar tamaño de galeria de fotos.
+TODO-5 Darle tamaño al mapa.
+TODO-6 Agregar hover/redireccion al icono de whatsapp.   */
 }

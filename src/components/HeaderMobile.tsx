@@ -6,7 +6,7 @@ interface HeaderProps {
   setMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export function Header({ menu, setMenu }: HeaderProps) {
+export function HeaderMobile({ menu, setMenu }: HeaderProps) {
   const toggleMenu = () => {
     setMenu(!menu);
   };
@@ -23,4 +23,4 @@ export function Header({ menu, setMenu }: HeaderProps) {
   );
 }
 
-export default Header;
+export default HeaderMobile;
