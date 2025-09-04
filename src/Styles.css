@@ -382,23 +382,59 @@ body {
     display: none;
   }
 
-  .logo_img {
-    object-fit: contain;
-  }
-
   .header-desk {
-    height: clamp(4rem, 10vh, 8rem);
+    height: clamp(6rem, 25vh, 30rem);
     display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
+    background-image: url(../public/images/Galeria/header-transparente.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   .ul-header-desk {
     display: flex;
-    align-items: center;
     gap: 4rem;
-    margin: 2rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    font-size: var(--font-base);
+    justify-content: center;
   }
+
+  .navbar-a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 12px;
+    color: #6d3918;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+  }
+
+  .navbar-a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 100%; /* Subrayado más corto que el texto */
+    height: 2px;
+    background-color: #fff;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+  }
+
+  .navbar-a:hover {
+    transform: translateY(-4px);
+    color: white;
+  }
+
+  .navbar-a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
   /* 
 TODO-3 Darle otro aspecto al icono de la pagina.
 TODO-4 Achicar tamaño de galeria de fotos.

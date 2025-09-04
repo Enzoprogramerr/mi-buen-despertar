@@ -2,11 +2,6 @@ export function HeaderDesktop() {
   return (
     <>
       <nav className="header-desk">
-        <img
-          className="logo_img"
-          src="/public/images/android-chrome-512x512.png"
-          alt="icono de la página"
-        />
         <ul className="ul-header-desk">
           <li className="li-header-desk">
             <a href="" className="navbar-a">
