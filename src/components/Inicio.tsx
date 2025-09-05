@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Carousel_img } from "./Carousel_img";
+import { Carousel } from "./Carousel";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 interface InicioProps {
   menu: boolean;
@@ -23,6 +25,7 @@ export function Inicio({ menu }: InicioProps) {
     return () => observer.disconnect();
   }, []);
 
+  const isMobile = useIsMobile();
   const images = [
     {
       key: 1,
@@ -41,6 +44,27 @@ export function Inicio({ menu }: InicioProps) {
       src: "/public/images/Galeria/depto_frente.webp",
       alt: "Pileta con vista a departamento",
       loading: "lazy",
+    },
+  ];
+
+  const slides = [
+    {
+      key: 1,
+      src: "/public/images/Galeria/patio_completa_mobile.webp",
+      alt: "Vista patio completa",
+      button: "Explore Component",
+    },
+    {
+      key: 2,
+      src: "/public/images/Galeria/casa_frente_mobile.webp",
+      alt: "Vista de casa",
+      button: "Explore Component",
+    },
+    {
+      key: 3,
+      src: "/public/images/Galeria/depto_frente.webp",
+      alt: "Pileta con vista a departamento",
+      button: "Explore Component",
     },
   ];
 
@@ -65,7 +89,11 @@ export function Inicio({ menu }: InicioProps) {
           <h2>Un adelanto de tu estadía</h2>
         </div>
         <section className="galery">
-          <Carousel_img images={images} />
+          {isMobile ? (
+            <Carousel_img images={images} />
+          ) : (
+            <Carousel slides={slides} />
+          )}
         </section>
         <section className="map-section">
           <h2 className="map-title">Ubicación de Mi Buen Despertar</h2>
