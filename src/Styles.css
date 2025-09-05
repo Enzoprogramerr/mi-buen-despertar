@@ -383,7 +383,27 @@ body {
     display: none;
   }
 
-  .header-desk {
+  .header-desktop {
+    height: clamp(6rem, 15vh, 30rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../public/images/Galeria/header-transparente.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #e2cf85;
+    padding-bottom: 1rem;
+  }
+
+  /* .navbar-sticky {
     height: clamp(6rem, 25vh, 30rem);
     display: flex;
     flex-direction: column;
@@ -393,15 +413,15 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-  }
+  } */
 
   .ul-header-desk {
     display: flex;
     gap: 4rem;
-    margin-bottom: 1rem;
     list-style: none;
     font-size: var(--font-base);
     justify-content: center;
+    margin: 0;
   }
 
   .navbar-a {

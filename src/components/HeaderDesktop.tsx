@@ -1,7 +1,8 @@
 export function HeaderDesktop() {
   return (
     <>
-      <nav className="header-desk">
+      <header className="header-desktop"></header>
+      <nav className="navbar-sticky">
         <ul className="ul-header-desk">
           <li className="li-header-desk">
             <a href="" className="navbar-a">
