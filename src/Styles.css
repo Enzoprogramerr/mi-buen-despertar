@@ -403,18 +403,6 @@ body {
     padding-bottom: 1rem;
   }
 
-  /* .navbar-sticky {
-    height: clamp(6rem, 25vh, 30rem);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-end;
-    background-image: url(../public/images/Galeria/header-transparente.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  } */
-
   .ul-header-desk {
     display: flex;
     gap: 4rem;
@@ -456,9 +444,14 @@ body {
     transform: translateX(-50%) scaleX(1);
   }
 
+  .inicio-boton {
+    transition: transform 0.3s ease;
+  }
+
   .inicio-boton:hover {
     color: #faf5f5;
     background: #dd6519;
+    transform: translateY(-4px);
   }
   /* 
 TODO-3 alternar color boton "reservar"
