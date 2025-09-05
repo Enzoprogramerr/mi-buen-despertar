@@ -198,11 +198,12 @@ body {
 }
 
 .inicio-boton {
-  background-color: #ffcc70;
-  color: #000;
-  border: none;
+  border-radius: 8px;
+  background: #e2cf854a;
+  color: white;
+  border-color: #fff;
   padding: 12px 24px;
-  border-radius: 5px;
+  border-radius: 17px;
   font-weight: bold;
   cursor: pointer;
   font-size: 1.6rem;
@@ -435,8 +436,12 @@ body {
     transform: translateX(-50%) scaleX(1);
   }
 
+  .inicio-boton:hover {
+    color: #faf5f5;
+    background: #dd6519;
+  }
   /* 
-TODO-3 Darle otro aspecto al icono de la pagina.
+TODO-3 alternar color boton "reservar"
 TODO-4 Achicar tamaño de galeria de fotos.
 TODO-5 Darle tamaño al mapa.
 TODO-6 Agregar hover/redireccion al icono de whatsapp.   */
