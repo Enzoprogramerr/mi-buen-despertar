@@ -268,10 +268,7 @@ h2 {
 
 .carrousel_conten {
   padding-top: 1rem;
-  margin: 1rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.4);
-  height: 60rem;
-  width: 50%;
 }
 
 .carousel-img {
@@ -326,10 +323,16 @@ h2 {
 
 .wp-div {
   width: 100%;
+  padding: var(--space-md);
   display: flex;
   justify-content: flex-end;
+}
+
+.wp-div a {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  padding: var(--space-md);
+  text-decoration: none;
 }
 
 .wp-div p {
@@ -475,10 +478,31 @@ h2 {
 
   .map-section {
     margin: 2rem;
+    padding: var(--space-xl) 0;
   }
-  /* 
 
-TODO-4 Achicar tamaño de galeria de fotos.
-TODO-5 Darle tamaño al mapa.
-TODO-6 Agregar hover/redireccion al icono de whatsapp.   */
+  .map-section .map {
+    height: 500px;
+  }
+
+  .img-inset {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  .map-title {
+    margin: 1rem 0;
+  }
+
+  /* 
+TODO-1 Cambiar tipografia de titulos.
+TODO-2 Agregar hover/redireccion al icono de whatsapp.   */
 }

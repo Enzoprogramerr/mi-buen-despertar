@@ -26,6 +26,8 @@ export function Inicio({ menu }: InicioProps) {
   }, []);
 
   const isMobile = useIsMobile();
+  console.log("isMobile:", isMobile);
+
   const images = [
     {
       key: 1,
@@ -52,19 +54,16 @@ export function Inicio({ menu }: InicioProps) {
       key: 1,
       src: "/public/images/Galeria/patio_completa_mobile.webp",
       alt: "Vista patio completa",
-      button: "Explore Component",
     },
     {
       key: 2,
       src: "/public/images/Galeria/casa_frente_mobile.webp",
       alt: "Vista de casa",
-      button: "Explore Component",
     },
     {
       key: 3,
-      src: "/public/images/Galeria/depto_frente.webp",
+      src: "/public/images/Galeria/depto_frente_recortada.jpg",
       alt: "Pileta con vista a departamento",
-      button: "Explore Component",
     },
   ];
 
@@ -149,12 +148,14 @@ export function Inicio({ menu }: InicioProps) {
           </section>
         }
         <div className="wp-div">
-          <p>¿Dudas? Contáctenos...</p>
-          <img
-            className="wp-icon"
-            src="/public/images/whatsapp.svg"
-            alt="Whatsapp"
-          />
+          <a href="http://">
+            <p>¿Dudas? Contáctenos...</p>
+            <img
+              className="wp-icon"
+              src="/public/images/whatsapp.svg"
+              alt="Whatsapp"
+            />
+          </a>
         </div>
       </div>
     </>
