@@ -112,9 +112,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold  relative">
-            {alt}
-          </h2>
+          <h2 className="description_image">{alt}</h2>
         </article>
       </li>
     </div>

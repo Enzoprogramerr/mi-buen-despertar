@@ -9,18 +9,41 @@ interface InicioProps {
 
 export function Inicio({ menu }: InicioProps) {
   const mapRef = useRef<HTMLIFrameElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && mapRef.current) {
-          mapRef.current.classList.add("visible");
-          observer.unobserve(entry.target);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(
+            entry.target
+          ); /* Esta línea le dice al IntersectionObserver que deje de 
+          observar el elemento que acaba de entrar en el viewport. */
         }
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.3,
+      } /*  significa que se activa cuando al menos el 30% del iframe es visible en pantalla. */
+    );
+    const observerTitle = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(
+            entry.target
+          ); /* Esta línea le dice al IntersectionObserver que deje de 
+          observar el elemento que acaba de entrar en el viewport. */
+        }
+      },
+      {
+        threshold: 0.1,
+      } /*  significa que se activa cuando al menos el 30% del iframe es visible en pantalla. */
     );
     if (mapRef.current) {
       observer.observe(mapRef.current);
+    }
+    if (titleRef.current) {
+      observerTitle.observe(titleRef.current);
     }
     return () => observer.disconnect();
   }, []);
@@ -107,7 +130,9 @@ export function Inicio({ menu }: InicioProps) {
         </section>
         {
           <section className="experiencias">
-            <h2>¿Qué podés hacer en Cura Brochero?</h2>
+            <h2 className="titleref" ref={titleRef}>
+              ¿Qué podés hacer en Cura Brochero?
+            </h2>
             <ul className="lista-actividades">
               <li>
                 <h3>🌊 Balnearios naturales</h3>
@@ -148,7 +173,7 @@ export function Inicio({ menu }: InicioProps) {
           </section>
         }
         <div className="wp-div">
-          <a href="http://">
+          <a href="https://wa.me/3516457961">
             <p>¿Dudas? Contáctenos...</p>
             <img
               className="wp-icon"

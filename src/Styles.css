@@ -26,8 +26,9 @@ body {
 }
 
 h2 {
-  font-family: "Charm", cursive;
-  /*   font-weight: 800; */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: italic;
   font-size: var(--font-title) !important;
 }
 
@@ -253,7 +254,7 @@ h2 {
 
 .subtitle {
   text-align: center;
-  margin: var(--space-md) 0;
+  margin: var(--space-lg) 0;
 }
 
 .subtitle h2 {
@@ -482,7 +483,8 @@ h2 {
   }
 
   .map-section .map {
-    height: 500px;
+    height: 400px;
+    width: 70%;
   }
 
   .img-inset {
@@ -502,7 +504,40 @@ h2 {
     margin: 1rem 0;
   }
 
+  .titleref {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
+      box-shadow 1s ease-in-out;
+  }
+
+  .titleref.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+
+  .wp-div a {
+    transition: transform 0.3s ease;
+  }
+  .wp-div a :hover {
+    transform: translateY(-4px);
+  }
+
+  .description_image {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 400; /* font-semibold */
+    position: relative; /* para posicionar elementos internos si lo necesitás */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25); /* fondo oscuro suave */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
   /* 
-TODO-1 Cambiar tipografia de titulos.
-TODO-2 Agregar hover/redireccion al icono de whatsapp.   */
+TODO-1 Agregar una o dos fotos al carousel.
+TODO-2 En mobile bloquear scroll de navbar.
+TDOD-3 Mejoraar visibbilidad de letras de nabvar.
+
+ */
 }
