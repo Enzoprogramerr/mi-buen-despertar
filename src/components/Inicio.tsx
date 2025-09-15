@@ -49,7 +49,6 @@ export function Inicio({ menu }: InicioProps) {
   }, []);
 
   const isMobile = useIsMobile();
-  console.log("isMobile:", isMobile);
 
   const baseImages = [
     {
@@ -67,7 +66,7 @@ export function Inicio({ menu }: InicioProps) {
     {
       key: 3,
       src: "/public/images/Galeria/depto_frente.webp",
-      alt: "Pileta con vista a departamento",
+      alt: "Vista departamento",
       loading: "lazy",
     },
   ];

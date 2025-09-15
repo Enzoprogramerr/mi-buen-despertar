@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "./components/Nav";
 import { Inicio } from "./components/Inicio";
 import { HeaderMobile } from "./components/HeaderMobile";
@@ -14,6 +14,12 @@ function App() {
   const [menu, setMenu] = useState(false);
 
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (!isMobile) {
+      setMenu(false);
+    }
+  }, [isMobile]);
 
   return (
     <>

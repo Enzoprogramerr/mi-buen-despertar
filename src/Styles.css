@@ -85,11 +85,12 @@ h2 {
 }
 
 .inicio.active {
-  opacity: 0.1;
+  opacity: 0;
 }
 
 .navbar.active {
   max-width: 50%;
+  z-index: 9999;
 }
 
 .navbar-ul {
@@ -97,10 +98,11 @@ h2 {
   padding: 0;
   width: fit-content;
   font-size: var(--font-base);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .navbar-li {
-  padding: 10px;
+  padding: 18px;
   text-align: center;
 }
 
@@ -384,10 +386,6 @@ h2 {
   font-size: 1.8rem;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 @media screen and (min-width: 768px) {
   .navbar-button {
     display: none;
@@ -539,9 +537,6 @@ h2 {
     transition: background-color 0.3s ease, opacity 0.3s ease;
   }
   /* 
-TODO-1 Agregar una o dos fotos al carousel.
-TODO-2 En mobile bloquear scroll de navbar.
-TDOD-3 Mejoraar visibbilidad de letras de nabvar.
 
  */
 }

@@ -3,10 +3,6 @@ interface NavProps {
 }
 
 export function Navbar({ menu }: NavProps) {
-  /*  const toggleMenu = () => {
-    setMenu(!menu);
-  }; */
-
   return (
     <>
       <nav className={`navbar ${menu ? "active" : ""}`}>
@@ -37,7 +33,7 @@ export function Navbar({ menu }: NavProps) {
             </a>
           </li>
           <li className="navbar-li">
-            <a href="" className="navbar-a">
+            <a href="#contacto" className="navbar-a">
               Contacto
             </a>
           </li>

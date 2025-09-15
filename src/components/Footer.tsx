@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer id="contacto" className="footer">
       <div className="footer_one">
         <div className="footer__brand">
           <h4>MI BUEN DESPERTAR</h4>

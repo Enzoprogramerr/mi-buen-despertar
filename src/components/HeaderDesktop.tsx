@@ -30,7 +30,7 @@ export function HeaderDesktop() {
             </a>
           </li>
           <li className="li-header-desk">
-            <a href="" className="navbar-a">
+            <a href="#contacto" className="navbar-a">
               Contacto
             </a>
           </li>
