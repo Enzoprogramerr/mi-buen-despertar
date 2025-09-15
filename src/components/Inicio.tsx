@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { Carousel_img } from "./Carousel_img";
 import { Carousel } from "./Carousel";
 import { useIsMobile } from "../hooks/useIsMobile";
@@ -51,7 +51,7 @@ export function Inicio({ menu }: InicioProps) {
   const isMobile = useIsMobile();
   console.log("isMobile:", isMobile);
 
-  const images = [
+  const baseImages = [
     {
       key: 1,
       src: "/public/images/Galeria/patio_completa_mobile.webp",
@@ -72,23 +72,19 @@ export function Inicio({ menu }: InicioProps) {
     },
   ];
 
-  const slides = [
-    {
-      key: 1,
-      src: "/public/images/Galeria/patio_completa_mobile.webp",
-      alt: "Vista patio completa",
-    },
-    {
-      key: 2,
-      src: "/public/images/Galeria/casa_frente_mobile.webp",
-      alt: "Vista de casa",
-    },
-    {
-      key: 3,
-      src: "/public/images/Galeria/depto_frente_recortada.jpg",
-      alt: "Pileta con vista a departamento",
-    },
-  ];
+  const imagesFinal = useMemo(() => {
+    return baseImages.map((img) => {
+      if (img.key === 3) {
+        return {
+          ...img,
+          src: isMobile
+            ? "/public/images/Galeria/depto_frente.webp"
+            : "/public/images/Galeria/depto_frente_recortada.jpg",
+        };
+      }
+      return img;
+    });
+  }, [isMobile]);
 
   return (
     <>
@@ -112,9 +108,9 @@ export function Inicio({ menu }: InicioProps) {
         </div>
         <section className="galery">
           {isMobile ? (
-            <Carousel_img images={images} />
+            <Carousel_img images={imagesFinal} />
           ) : (
-            <Carousel slides={slides} />
+            <Carousel slides={imagesFinal} />
           )}
         </section>
         <section className="map-section">

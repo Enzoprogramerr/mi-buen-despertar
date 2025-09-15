@@ -15,15 +15,6 @@ function App() {
 
   const isMobile = useIsMobile();
 
-  /* useEffect(() => {
-  if (menu) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
-  }
-}, [menu]);   TODO- HACER EL BLOQUEO DEL SCROOL AL ACTIVAR NAVBAR.
- */
-
   return (
     <>
       <div className="cont_principal">

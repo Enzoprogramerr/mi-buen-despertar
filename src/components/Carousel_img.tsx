@@ -2,7 +2,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 interface CarouselProps {
-  images: { src: string; alt: string; key: number; loading: string }[];
+  images: { src: string; alt: string; key: number }[];
 }
 
 export function Carousel_img({ images }: CarouselProps) {
