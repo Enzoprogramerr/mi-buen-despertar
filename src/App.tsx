@@ -30,7 +30,7 @@ function App() {
           <HeaderDesktop />
         )}
         <div className="cont_inicio">
-          <Navbar menu={menu}></Navbar>
+          <Navbar menu={menu} setMenu={setMenu}></Navbar>
           <Inicio menu={menu}></Inicio>
         </div>
         <Footer></Footer>

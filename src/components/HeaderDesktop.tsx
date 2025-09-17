@@ -6,11 +6,6 @@ export function HeaderDesktop() {
         <ul className="ul-header-desk">
           <li className="li-header-desk">
             <a href="" className="navbar-a">
-              Servicios
-            </a>
-          </li>
-          <li className="li-header-desk">
-            <a href="" className="navbar-a">
               Casa
             </a>
           </li>
@@ -20,7 +15,7 @@ export function HeaderDesktop() {
             </a>
           </li>
           <li className="li-header-desk">
-            <a href="" className="navbar-a">
+            <a href="#ubi" className="navbar-a">
               Ubicación
             </a>
           </li>

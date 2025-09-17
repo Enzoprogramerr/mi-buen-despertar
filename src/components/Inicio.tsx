@@ -112,7 +112,7 @@ export function Inicio({ menu }: InicioProps) {
             <Carousel slides={imagesFinal} />
           )}
         </section>
-        <section className="map-section">
+        <section id="ubi" className="map-section">
           <h2 className="map-title">Ubicación de Mi Buen Despertar</h2>
           <iframe
             ref={mapRef}
