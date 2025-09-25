@@ -1,41 +1,18 @@
-import { useEffect, useState } from "react";
-import { Navbar } from "./components/Nav";
-import { Inicio } from "./components/Inicio";
-import { HeaderMobile } from "./components/HeaderMobile";
-import { HeaderDesktop } from "./components/HeaderDesktop";
-import { Footer } from "./components/Footer";
-import { useIsMobile } from "./hooks/useIsMobile";
-
-/* import { useEffect } from "react"; */
-
-import "./Styles.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.js";
+/* import Casa from '../pages/Casa';
+import Departamento from './pages/Departamento'; */
 
 function App() {
-  const [menu, setMenu] = useState(false);
-
-  const isMobile = useIsMobile();
-
-  useEffect(() => {
-    if (!isMobile) {
-      setMenu(false);
-    }
-  }, [isMobile]);
-
   return (
-    <>
-      <div className="cont_principal">
-        {isMobile ? (
-          <HeaderMobile menu={menu} setMenu={setMenu} />
-        ) : (
-          <HeaderDesktop />
-        )}
-        <div className="cont_inicio">
-          <Navbar menu={menu} setMenu={setMenu}></Navbar>
-          <Inicio menu={menu}></Inicio>
-        </div>
-        <Footer></Footer>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/casa" element={<Casa />} />
+        <Route path="/departamento" element={<Departamento />} /> */}
+      </Routes>
+    </Router>
   );
 }
+
 export default App;

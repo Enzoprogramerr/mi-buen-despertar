@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef } from "react";
-import { Carousel_img } from "./Carousel_img";
+import { useEffect, useRef } from "react";
+import { CarouselMobile } from "./CarouselMobile";
 import { Carousel } from "./Carousel";
 import { useIsMobile } from "../hooks/useIsMobile";
 
@@ -50,7 +50,7 @@ export function Inicio({ menu }: InicioProps) {
 
   const isMobile = useIsMobile();
 
-  const baseImages = [
+  const mobileImages = [
     {
       key: 1,
       src: "/public/images/Galeria/patio_completa_mobile.webp",
@@ -65,13 +65,39 @@ export function Inicio({ menu }: InicioProps) {
     },
     {
       key: 3,
-      src: "/public/images/Galeria/depto_frente.webp",
+      src: "/public/images/Galeria/Mobile/casa_comedor_1.2.webp",
+      alt: "Vista departamento",
+      loading: "lazy",
+    },
+    {
+      key: 4,
+      src: "/public/images/Galeria/Mobile/cas_hab_1.2.jpg",
+      alt: "Vista habitacion casa",
+      loading: "lazy",
+    },
+  ];
+  const desktopImages = [
+    {
+      key: 1,
+      src: "/public/images/Galeria/patio_completa_mobile.webp",
+      alt: "Vista patio completa",
+      loading: "lazy",
+    },
+    {
+      key: 2,
+      src: "/public/images/Galeria/casa_frente_mobile.webp",
+      alt: "Vista de casa",
+      loading: "lazy",
+    },
+    {
+      key: 3,
+      src: "/public/images/Galeria/depto_frente_final.webp",
       alt: "Vista departamento",
       loading: "lazy",
     },
   ];
 
-  const imagesFinal = useMemo(() => {
+  /* const imagesFinal = useMemo(() => {
     return baseImages.map((img) => {
       if (img.key === 3) {
         return {
@@ -84,7 +110,7 @@ export function Inicio({ menu }: InicioProps) {
       return img;
     });
   }, [isMobile]);
-
+ */
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
@@ -107,9 +133,9 @@ export function Inicio({ menu }: InicioProps) {
         </div>
         <section className="galery">
           {isMobile ? (
-            <Carousel_img images={imagesFinal} />
+            <CarouselMobile images={mobileImages} />
           ) : (
-            <Carousel slides={imagesFinal} />
+            <Carousel slides={desktopImages} />
           )}
         </section>
         <section id="ubi" className="map-section">

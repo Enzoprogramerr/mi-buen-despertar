@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function HeaderDesktop() {
   return (
     <>
@@ -5,9 +7,9 @@ export function HeaderDesktop() {
       <nav className="navbar-sticky">
         <ul className="ul-header-desk">
           <li className="li-header-desk">
-            <a href="" className="navbar-a">
+            <Link to="/casa" className="navbar-a">
               Casa
-            </a>
+            </Link>
           </li>
           <li className="li-header-desk">
             <a href="" className="navbar-a">
@@ -20,9 +22,9 @@ export function HeaderDesktop() {
             </a>
           </li>
           <li className="li-header-desk">
-            <a href="" className="navbar-a">
-              Tarifas
-            </a>
+            <Link to="/tarifa" className="navbar-a">
+              Tarifa
+            </Link>
           </li>
           <li className="li-header-desk">
             <a href="#contacto" className="navbar-a">
