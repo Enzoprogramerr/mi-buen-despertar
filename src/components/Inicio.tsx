@@ -2,12 +2,14 @@ import { useEffect, useRef } from "react";
 import { CarouselMobile } from "./CarouselMobile";
 import { Carousel } from "./Carousel";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useScrollToHash } from "../hooks/useScrollToHash";
 
 interface InicioProps {
   menu: boolean;
 }
 
 export function Inicio({ menu }: InicioProps) {
+  useScrollToHash();
   const mapRef = useRef<HTMLIFrameElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => {
