@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface NavProps {
   menu: boolean;
   setMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,9 +14,9 @@ export function Navbar({ menu, setMenu }: NavProps) {
       <nav className={`navbar ${menu ? "active" : ""}`}>
         <ul className="navbar-ul">
           <li className="navbar-li">
-            <a href="" className="navbar-a" onClick={toggleMenu}>
+            <Link to="/casa" className="navbar-a" onClick={toggleMenu}>
               Casa
-            </a>
+            </Link>
           </li>
           <li className="navbar-li">
             <a href="" className="navbar-a" onClick={toggleMenu}>
@@ -22,9 +24,13 @@ export function Navbar({ menu, setMenu }: NavProps) {
             </a>
           </li>
           <li className="navbar-li">
-            <a href="#ubi" className="navbar-a" onClick={toggleMenu}>
+            <Link
+              to={{ pathname: "/", hash: "#ubi" }}
+              className="navbar-a"
+              onClick={toggleMenu}
+            >
               Ubicación
-            </a>
+            </Link>
           </li>
           <li className="navbar-li">
             <a href="" className="navbar-a" onClick={toggleMenu}>

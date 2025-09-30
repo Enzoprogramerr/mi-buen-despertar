@@ -388,6 +388,59 @@ h2 {
   display: none;
 }
 
+.block_title {
+  height: 7rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.block_title h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.title_services {
+  font-size: var(--font-large);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-lg) 0;
+  color: #6d3918;
+}
+
+.description {
+  margin: var(--space-lg) 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.element {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.element img {
+  width: 6rem;
+  height: 6rem;
+  margin-top: 1rem;
+}
+
+/* TODO-respetar el mismo alto de foto que la ultima en la galeria. */
+
 @media screen and (min-width: 768px) {
   .navbar-button {
     display: none;
@@ -539,6 +592,11 @@ h2 {
     transition: background-color 0.3s ease, opacity 0.3s ease;
   }
   /* 
-  TODO-1 achicar imagen de carrousel mobile. de alto 500px // las imagenes dbene tener un 450 de ancho, 720 alto CORTARLAS.
- */
+  TODO-1 Aplicar redireccion a inicio en el logo(en todas las paginas).
+  TODO-2 Darle tamaño total del viemport a la seccion de casa e imagen.
+  TODO-3 Cargar todas las imagenes de la casa.
+  TODO-4 Agregar informacion importante sobre la reserva.
+  TODO-5 Precio de casa.
+  TODO-6 Boton de reserva que abra un popap y aparezca el calendario.
+  */
 }
