@@ -61,26 +61,56 @@ const serviciosCasa = [
 const mobileImages = [
   {
     key: 1,
-    src: "/public/images/Galeria/patio_completa_mobile.webp",
-    alt: "Vista patio completa",
+    src: "/public/images/Galeria/casa_frente_mobile.webp",
+    alt: "Vista frente casa",
     loading: "lazy",
   },
   {
     key: 2,
-    src: "/public/images/Galeria/casa_frente_mobile.webp",
-    alt: "Vista de casa",
+    src: "/public/images/Galeria/casa_cochera.webp",
+    alt: "Vista de cochera casa",
     loading: "lazy",
   },
   {
     key: 3,
-    src: "/public/images/Galeria/Mobile/casa_comedor_1.2.webp",
-    alt: "Vista departamento",
+    src: "/public/images/Galeria/casa_comedor_1.2.webp",
+    alt: "comedor de casa",
     loading: "lazy",
   },
   {
     key: 4,
-    src: "/public/images/Galeria/Mobile/cas_hab_1.2.jpg",
-    alt: "Vista habitacion casa",
+    src: "/public/images/Galeria/casa_comedor_1.webp",
+    alt: "comedor de casa",
+    loading: "lazy",
+  },
+  {
+    key: 5,
+    src: "/public/images/Galeria/cas_hab_1.jpg",
+    alt: "habitacion una",
+    loading: "lazy",
+  },
+  {
+    key: 6,
+    src: "/public/images/Galeria/casa_hab.1.2.webp",
+    alt: "habitacion una",
+    loading: "lazy",
+  },
+  {
+    key: 7,
+    src: "/public/images/Galeria/casa_hab_2.1.webp",
+    alt: "habitacion dos",
+    loading: "lazy",
+  },
+  {
+    key: 8,
+    src: "/public/images/Galeria/casa_hab_2.2.webp",
+    alt: "habitacion dos ",
+    loading: "lazy",
+  },
+  {
+    key: 9,
+    src: "/public/images/Galeria/casa_baño.webp",
+    alt: "baño",
     loading: "lazy",
   },
 ];
@@ -118,7 +148,6 @@ export function Casa({ menu }: CasaProps) {
         <div className="block_title">
           <h1>CASA</h1>
         </div>
-
         <section className="galery">
           {isMobile ? (
             <CarouselMobile images={mobileImages} />
