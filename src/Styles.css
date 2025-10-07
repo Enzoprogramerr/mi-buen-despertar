@@ -25,11 +25,24 @@ body {
   overflow-x: hidden;
 }
 
-h2 {
+h2,
+h3,
+h4 {
   font-family: "Inter", sans-serif;
+}
+
+h2 {
   font-weight: 400;
   font-style: italic;
   font-size: var(--font-title) !important;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+section {
+  margin: var(--space-md) 0;
 }
 
 .cont_principal {
@@ -286,13 +299,13 @@ h2 {
 
 .experiencias {
   height: auto;
-  padding: var(--space-md) 0;
 }
 
 .experiencias h2 {
   padding-top: 3rem;
   color: #6d3918;
   font-size: var(--font-title);
+  text-align: center;
 }
 
 .lista-actividades {
@@ -409,12 +422,12 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: var(--space-lg) 0;
+  margin: var(--space-xxl) 0;
   color: #6d3918;
+  font-weight: 600;
 }
 
 .description {
-  margin: var(--space-lg) 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -437,6 +450,24 @@ h2 {
   width: 6rem;
   height: 6rem;
   margin-top: 1rem;
+}
+
+.intro {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.intro h3 {
+  font-weight: 600;
+  color: #6d3918;
+  margin-bottom: 10px;
+}
+
+.intro h4 {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* TODO-respetar el mismo alto de foto que la ultima en la galeria. */
@@ -594,8 +625,8 @@ h2 {
   /* 
   TODO-2 debo cambiar la foto de habitacion 2.
   TODO-3 Cargar todas las imagenes de la casa (vista deskop).
-  TODO-4 Agregar informacion importante sobre la reserva.
-  TODO-5 Precio de casa.
+  TODO-4 Crear pagina terminos y condiciones.
+  TODO-5 Precios de casa.
   TODO-6 Boton de reserva que abra un popap y aparezca el calendario.
   */
 }

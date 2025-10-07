@@ -148,6 +148,13 @@ export function Casa({ menu }: CasaProps) {
         <div className="block_title">
           <h1>CASA</h1>
         </div>
+        <section className="intro">
+          <h3>Casa de campo, alojamiento completo para hasta 8 personas.</h3>
+          <h4>
+            Despertá rodeado de sierras, silencio y calidez. Ideal para
+            reconectar con la naturaleza y descansar profundamente.
+          </h4>
+        </section>
         <section className="galery">
           {isMobile ? (
             <CarouselMobile images={mobileImages} />
@@ -167,13 +174,38 @@ export function Casa({ menu }: CasaProps) {
         </section>
         {/* TODO- VER HOJA DE WP */}
         <section className="info_important">
-          <ul></ul>
+          <h3 className="title_services">Información Importante</h3>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <h3>Horario de ingreso y salida</h3>
+              <p>
+                - Check-in: desde las 10:00 hs <br></br> - Check-out: hasta las
+                13:00 hs
+              </p>
+            </li>
+            <li>
+              <h3>Politica de mascotas</h3>
+              <p>- Se aceptan mascotas pequeñas</p>
+            </li>
+            <li>
+              <h3>Condiciones básicas de reserva</h3>
+              <p>
+                - Precio por persona <br></br> - Seña del 30% para confirmar
+                reserva
+              </p>
+            </li>
+            <li>
+              <h3>Al reservar</h3>
+              <p>
+                - Al realizar la reserva de nuestros servicios, el cliente
+                acepta y reconoce todos los{" "}
+                <a href="">Términos y Condiciones</a>.
+              </p>
+              <p>
+                - Ofrecemos únicamente servicio de alojamiento, pero las cabañas
+                cuentan con una cocina completamente equipada para su comodidad.
+              </p>
+            </li>
           </ul>
         </section>
       </div>
