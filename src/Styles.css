@@ -38,7 +38,7 @@ h2 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 section {
@@ -468,6 +468,29 @@ section {
   color: #555;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.mobile-reservation-button {
+  display: block;
+  width: 90%;
+  margin: 1.5em auto;
+  padding: 1em;
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #8b6f4e, #bca48a);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  letter-spacing: 0.4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-reservation-button:hover {
+  background: linear-gradient(135deg, #a88c6f, #8b6f4e);
+  transform: scale(1.02);
 }
 
 /* TODO-respetar el mismo alto de foto que la ultima en la galeria. */

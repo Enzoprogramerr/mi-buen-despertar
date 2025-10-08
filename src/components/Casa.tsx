@@ -206,8 +206,15 @@ export function Casa({ menu }: CasaProps) {
                 cuentan con una cocina completamente equipada para su comodidad.
               </p>
             </li>
+            <li>
+              <h3>Precios</h3>
+              <p>- $60.000 por persona.</p>
+            </li>
           </ul>
         </section>
+        <button className="mobile-reservation-button">
+          RESERVAR - DISPONIBILIDAD
+        </button>
       </div>
     </>
   );
