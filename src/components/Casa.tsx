@@ -74,43 +74,43 @@ const mobileImages = [
   {
     key: 3,
     src: "/public/images/Galeria/casa_comedor_1.2.webp",
-    alt: "comedor de casa",
+    alt: "Comedor de casa",
     loading: "lazy",
   },
   {
     key: 4,
     src: "/public/images/Galeria/casa_comedor_1.webp",
-    alt: "comedor de casa",
+    alt: "Comedor de casa",
     loading: "lazy",
   },
   {
     key: 5,
     src: "/public/images/Galeria/cas_hab_1.jpg",
-    alt: "habitacion una",
+    alt: "Habitacion a",
     loading: "lazy",
   },
   {
     key: 6,
     src: "/public/images/Galeria/casa_hab.1.2.webp",
-    alt: "habitacion una",
+    alt: "Habitacion a",
     loading: "lazy",
   },
   {
     key: 7,
     src: "/public/images/Galeria/casa_hab_2.1.webp",
-    alt: "habitacion dos",
+    alt: "Habitacion b",
     loading: "lazy",
   },
   {
     key: 8,
     src: "/public/images/Galeria/casa_hab_2.2.webp",
-    alt: "habitacion dos ",
+    alt: "Habitacion b",
     loading: "lazy",
   },
   {
     key: 9,
     src: "/public/images/Galeria/casa_baño.webp",
-    alt: "baño",
+    alt: "Baño",
     loading: "lazy",
   },
 ];
@@ -159,11 +159,11 @@ export function Casa({ menu }: CasaProps) {
           {isMobile ? (
             <CarouselMobile images={mobileImages} />
           ) : (
-            <Carousel slides={desktopImages} />
+            <Carousel slides={mobileImages} />
           )}
         </section>
         <h3 className="title_services">Servicios</h3>
-        <section className="description">
+        <section className="description-services">
           {serviciosCasa.map((e, i) => (
             <article key={i} className="element">
               <h3>{e.nombre}</h3>
@@ -174,7 +174,7 @@ export function Casa({ menu }: CasaProps) {
         </section>
         {/* TODO- VER HOJA DE WP */}
         <section className="info_important">
-          <h3 className="title_services">Información Importante</h3>
+          <h3 className="title_services2">Información Importante</h3>
           <ul>
             <li>
               <h3>Horario de ingreso y salida</h3>

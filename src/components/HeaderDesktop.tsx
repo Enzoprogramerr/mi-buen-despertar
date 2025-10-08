@@ -17,9 +17,9 @@ export function HeaderDesktop() {
             </a>
           </li>
           <li className="li-header-desk">
-            <a href="#ubi" className="navbar-a">
+            <Link to={{ pathname: "/", hash: "#ubi" }} className="navbar-a">
               Ubicación
-            </a>
+            </Link>
           </li>
           <li className="li-header-desk">
             <Link to="/tarifa" className="navbar-a">
