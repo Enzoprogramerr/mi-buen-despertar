@@ -12,9 +12,9 @@ export function HeaderDesktop() {
             </Link>
           </li>
           <li className="li-header-desk">
-            <a href="" className="navbar-a">
-              Departamento
-            </a>
+            <Link to="/duplex" className="navbar-a">
+              Duplex
+            </Link>
           </li>
           <li className="li-header-desk">
             <Link to={{ pathname: "/", hash: "#ubi" }} className="navbar-a">

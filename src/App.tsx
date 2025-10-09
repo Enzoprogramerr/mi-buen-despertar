@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
 import CasaRoute from "./pages/CasaRoute.tsx";
-import Departamento from "../src/pages/Departamento.tsx";
+import DuplexRoute from "./pages/DuplexRoute.tsx";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/casa" element={<CasaRoute />} />
-        <Route path="/departamento" element={<Departamento />} />
+        <Route path="/duplex" element={<DuplexRoute />} />
       </Routes>
     </Router>
   );
