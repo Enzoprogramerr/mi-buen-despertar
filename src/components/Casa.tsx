@@ -85,53 +85,44 @@ const mobileImages = [
   },
   {
     key: 5,
+    src: "/public/images/Galeria/casa_cocina.webp",
+    alt: "Cocina",
+    loading: "lazy",
+  },
+  {
+    key: 6,
     src: "/public/images/Galeria/cas_hab_1.jpg",
     alt: "Habitacion a",
     loading: "lazy",
   },
   {
-    key: 6,
+    key: 7,
     src: "/public/images/Galeria/casa_hab.1.2.webp",
     alt: "Habitacion a",
     loading: "lazy",
   },
   {
-    key: 7,
+    key: 8,
     src: "/public/images/Galeria/casa_hab_2.1.webp",
     alt: "Habitacion b",
     loading: "lazy",
   },
   {
-    key: 8,
+    key: 9,
     src: "/public/images/Galeria/casa_hab_2.2.webp",
     alt: "Habitacion b",
     loading: "lazy",
   },
   {
-    key: 9,
-    src: "/public/images/Galeria/casa_baño.webp",
+    key: 10,
+    src: "/public/images/Galeria/baño_final.webp",
     alt: "Baño",
     loading: "lazy",
   },
-];
-
-const desktopImages = [
   {
-    key: 1,
+    key: 11,
     src: "/public/images/Galeria/patio_completa_mobile.webp",
     alt: "Vista patio completa",
-    loading: "lazy",
-  },
-  {
-    key: 2,
-    src: "/public/images/Galeria/casa_frente_mobile.webp",
-    alt: "Vista de casa",
-    loading: "lazy",
-  },
-  {
-    key: 3,
-    src: "/public/images/Galeria/depto_frente_final.webp",
-    alt: "Vista departamento",
     loading: "lazy",
   },
 ];

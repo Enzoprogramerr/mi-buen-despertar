@@ -286,6 +286,13 @@ section {
   min-height: 45rem;
   padding-top: 1rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.4);
+  height: 100%;
+}
+
+.carousel-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .slider-animated {
@@ -650,6 +657,10 @@ section {
     transform: translateY(-4px);
   }
 
+  .block_title {
+    margin: 5rem 0 0.5rem 0;
+  }
+
   .description_image {
     font-size: 1.125rem;
     font-weight: 400;
@@ -670,6 +681,10 @@ section {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .title_services {
+    margin: 10rem 0 4rem 0;
+  }
+
   .title_services2 {
     font-size: var(--font-large);
     font-family: "Inter", sans-serif;
@@ -687,11 +702,8 @@ section {
   }
 
   /*
-
-  TODO-2 debo cambiar la foto de habitacion 2.
-  TODO-3 Cargar todas las imagenes de la casa (vista deskop).
+  TODO-3 Agregar "inicio" a los navs.
   TODO-4 Crear pagina terminos y condiciones.
-  TODO-5 Precios de casa.
-  TODO-6 Boton de reserva que abra un popap y aparezca el calendario.
+  TODO-5 Boton de reserva que abra un popap y aparezca el calendario.
   */
 }
