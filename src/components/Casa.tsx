@@ -125,6 +125,12 @@ const mobileImages = [
     alt: "Vista patio completa",
     loading: "lazy",
   },
+  {
+    key: 12,
+    src: "/public/images/Galeria/piletajpg.jpg",
+    alt: "Vista de pileta",
+    loading: "lazy",
+  },
 ];
 
 interface CasaProps {
