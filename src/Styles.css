@@ -511,6 +511,10 @@ section {
   font-weight: 600;
 }
 
+.footer__contact a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-button {
     display: none;

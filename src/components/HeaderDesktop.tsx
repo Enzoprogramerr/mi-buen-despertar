@@ -7,6 +7,11 @@ export function HeaderDesktop() {
       <nav className="navbar-sticky">
         <ul className="ul-header-desk">
           <li className="li-header-desk">
+            <Link to="/" className="navbar-a">
+              Inicio
+            </Link>
+          </li>
+          <li className="li-header-desk">
             <Link to="/casa" className="navbar-a">
               Casa
             </Link>

@@ -14,6 +14,11 @@ export function Navbar({ menu, setMenu }: NavProps) {
       <nav className={`navbar ${menu ? "active" : ""}`}>
         <ul className="navbar-ul">
           <li className="navbar-li">
+            <Link to="/" className="navbar-a" onClick={toggleMenu}>
+              Inicio
+            </Link>
+          </li>
+          <li className="navbar-li">
             <Link to="/casa" className="navbar-a" onClick={toggleMenu}>
               Casa
             </Link>
