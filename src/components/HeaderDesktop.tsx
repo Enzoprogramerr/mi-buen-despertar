@@ -36,6 +36,11 @@ export function HeaderDesktop() {
               Contacto
             </a>
           </li>
+          <li className="li-header-desk">
+            <Link to="/terminos" className="navbar-a">
+              Terminos y condiciones
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

@@ -152,7 +152,7 @@ export function Inicio({ menu }: InicioProps) {
           ></iframe>
         </section>
         {
-          <section className="experiencias">
+          <section className="experiencias" id="actividades">
             <h2 className="titleref" ref={titleRef}>
               ¿Qué podés hacer en Cura Brochero?
             </h2>

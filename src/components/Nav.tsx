@@ -47,6 +47,11 @@ export function Navbar({ menu, setMenu }: NavProps) {
               Contacto
             </a>
           </li>
+          <li className="navbar-li">
+            <Link to="/terminos" className="navbar-a" onClick={toggleMenu}>
+              Terminos y condiciones
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
