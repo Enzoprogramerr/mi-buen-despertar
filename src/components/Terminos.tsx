@@ -7,11 +7,10 @@ interface TerminosProps {
 export function Terminos({ menu }: TerminosProps) {
   return (
     <div className={`inicio ${menu ? "active" : ""}`}>
-      <article>
-        <header>
-          <h1>Términos y Condiciones</h1>
-        </header>
-
+      <header>
+        <h1 className="title_terms">Términos y Condiciones</h1>
+      </header>
+      <article className="containerTerminos">
         <section id="reservas">
           <h2>Reservas</h2>
           <p>
@@ -43,7 +42,7 @@ export function Terminos({ menu }: TerminosProps) {
             La propiedad se alquila para ser ocupada por la cantidad de personas
             pactada a la hora de la reserva, NO pudiendo alojar más de dicha
             cantidad. Caso contrario se cobrara $20.000 por día y por persona
-            que exceda esa cantidad y el propietario detecte,
+            que exceda esa cantidad y el propietario detecte.
           </p>
         </section>
 
@@ -61,13 +60,14 @@ export function Terminos({ menu }: TerminosProps) {
         </section>
 
         <section id="preguntas frecuentes">
-          <h3>¿Dan desayuno?</h3>
+          <h1>Preguntas frecuentes</h1>
+          <h3>¿Ofrecen servicio de desayuno?</h3>
           <p>
-            Solo brindamos servicios de estadía no incluye desayuno, mucama,
+            Solo brindamos servicios de estadía. No incluye desayuno, mucama,
             toallas ni ropa de cama.
           </p>
           <h3>¿Son pet friendly ?</h3>
-          <p>¡Tu mascota es bienvenida! (tamaños pequeños)</p>
+          <p>¡Tu mascota es bienvenida! (tamaños pequeños).</p>
           <h3>¿Que actividades se pueden realizar en los alrededores?</h3>
           <p>
             <Link to={{ pathname: "/", hash: "actividades" }}>
@@ -78,14 +78,14 @@ export function Terminos({ menu }: TerminosProps) {
           <p>
             <Link to={{ pathname: "/", hash: "#ubi" }}>Ubicación</Link>
           </p>
-          <h3>¿Se puede acceder facilmente en auto?</h3>
+          <h3>¿Se puede acceder fácilmente en auto?</h3>
           <p>
             Sí, el acceso al complejo es muy sencillo. El camino es
             completamente plano, lo que permite llegar cómodamente en cualquier
-            tipo de vehículo
+            tipo de vehículo.
           </p>
           <h3>¿La piscina es de uso compartida?</h3>
-          <p>Sí con duplex del mismo complejo.</p>
+          <p>Sí, con duplex del mismo complejo.</p>
           <h3>¿Formas de pago?</h3>
           <p>Transferencia o efectivo en pesos o dólares.</p>
         </section>

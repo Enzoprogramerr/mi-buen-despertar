@@ -25,7 +25,7 @@ const serviciosDuplex = [
   },
   {
     nombre: "Aire acondicionado",
-    descripcion: "En habitacion",
+    descripcion: "En habitación",
     icono:
       "/public/images/indoor_ac_split_air_conditioning_cooler_air_conditioner_icon_218667.svg",
   },
@@ -42,7 +42,7 @@ const serviciosDuplex = [
   },
   {
     nombre: "Asador",
-    descripcion: "Asador privado y techado",
+    descripcion: "Asador techado",
     icono: "/public/images/food_cooking_grill_beer_jar_icon_259017.svg",
   },
   {
@@ -52,7 +52,7 @@ const serviciosDuplex = [
   },
   {
     nombre: "Amplio espacio verde",
-    descripcion: "Disposicion de mesas y sillas plasticas en todo el parque",
+    descripcion: "Disposición de mesas y sillas plasticas en todo el parque",
     icono: "/public/images/yoga_outdoor_icon_262555.svg",
   },
 ];
@@ -137,7 +137,7 @@ export function Duplex({ menu }: DuplexProps) {
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
         <div className="block_title">
-          <h1>DUPLEX</h1>
+          <h1 className="title_accommodation">DUPLEX</h1>
         </div>
         <section className="intro">
           <h3>Duplex, alojamiento completo para hasta 4 personas.</h3>
@@ -153,7 +153,7 @@ export function Duplex({ menu }: DuplexProps) {
             <Carousel slides={duplexImage} />
           )}
         </section>
-        <h3 className="title_services">Servicios</h3>
+        <h1 className="title_services">Servicios</h1>
         <section className="description-services">
           {serviciosDuplex.map((e, i) => (
             <article key={i} className="element">
@@ -164,7 +164,7 @@ export function Duplex({ menu }: DuplexProps) {
           ))}
         </section>
         <section className="info_important">
-          <h3 className="title_services2">Información Importante</h3>
+          <h1 className="title_service2">Información Importante</h1>
           <ul>
             <li>
               <h3>Horario de ingreso y salida</h3>

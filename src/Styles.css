@@ -31,10 +31,19 @@ h4 {
   font-family: "Inter", sans-serif;
 }
 
-h2 {
+.inicio h1 {
   font-weight: 400;
   font-style: italic;
-  font-size: var(--font-title) !important;
+  font-size: var(--font-title);
+  color: #6d3918;
+  line-height: normal;
+}
+
+.inicio h2 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--font-large);
+  color: #6d3918;
 }
 
 p {
@@ -201,14 +210,16 @@ section {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /*oscurece un poco la imagen */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
 }
 
 .inicio-title {
+  font-family: "Inter", sans-serif;
   font-size: 3rem;
   margin-bottom: 10px;
+  color: white;
 }
 
 .inicio-subtitle {
@@ -315,6 +326,20 @@ section {
   text-align: center;
 }
 
+.titleref {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
+    box-shadow 1s ease-in-out;
+  text-align: center;
+}
+
+.titleref.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
 .lista-actividades {
   list-style: none;
   padding: 0;
@@ -408,13 +433,12 @@ section {
   display: none;
 }
 
-.block_title {
+.title_accommodation {
   min-height: 5rem;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   margin: 1rem 0 0.5rem 0;
+  padding: 0 1rem;
 }
 
 .block_title h1 {
@@ -424,14 +448,8 @@ section {
 }
 
 .title_services {
-  font-size: var(--font-large);
-  font-family: "Inter", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   margin: 5rem 0 3rem 0;
-  color: #6d3918;
-  font-weight: 600;
 }
 
 .description-services {
@@ -451,6 +469,10 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.element h3 {
+  font-weight: 600;
 }
 
 .element img {
@@ -500,19 +522,54 @@ section {
   transform: scale(1.02);
 }
 
-.title_services2 {
-  font-size: var(--font-large);
-  font-family: "Inter", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.title_service2 {
+  text-align: center;
   margin: 6rem 0 4rem 0;
-  color: #6d3918;
-  font-weight: 600;
 }
 
 .footer__contact a {
   text-decoration: none;
+}
+
+.title_terms {
+  min-height: 5rem;
+  background-color: white;
+  text-align: center;
+  margin: var(--space-xxl) 0;
+  padding: 0 1rem;
+}
+
+.containerTerminos {
+  margin: var(--space-md);
+}
+
+.containerTerminos h1 {
+  text-align: center;
+  margin: var(--space-xxl) 0;
+}
+
+.containerTerminos header {
+  margin: 0;
+}
+
+.video_facebook {
+  margin: 1rem;
+}
+
+.btn-facebook {
+  display: inline-block;
+  background-color: #1877f2;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-small);
+}
+
+.btn-facebook:hover {
+  background-color: #145dbf;
 }
 
 @media screen and (min-width: 768px) {
@@ -641,19 +698,6 @@ section {
     margin: 1rem 0;
   }
 
-  .titleref {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
-      box-shadow 1s ease-in-out;
-  }
-
-  .titleref.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.5s;
-  }
-
   .wp-div a {
     transition: transform 0.3s ease;
   }
@@ -666,7 +710,7 @@ section {
   }
 
   .description_image {
-    font-size: 1.125rem;
+    font-size: var(--font-large);
     font-weight: 400;
     position: relative;
     color: white;
@@ -689,15 +733,8 @@ section {
     margin: 10rem 0 4rem 0;
   }
 
-  .title_services2 {
-    font-size: var(--font-large);
-    font-family: "Inter", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .title_service2 {
     margin: 7rem 0 4rem 0;
-    color: #6d3918;
-    font-weight: 600;
   }
 
   .mobile-reservation-button {
@@ -706,8 +743,15 @@ section {
   }
 
   /*
-  TODO-4 Crear pagina terminos y condiciones.
   TODO-5 Boton de reserva que abra un popap y aparezca el calendario.
-  TODO-6 aramar pdf de condiciones.
+  TODO-6 armar pdf de condiciones.
+  TODO-7 Agregar redireccion en botones de reserva.
+  TODO.8 Agregar redireccion de video.
   */
+}
+
+@media (max-width: 800px) {
+  .ul-header-desk {
+    gap: 2rem;
+  }
 }

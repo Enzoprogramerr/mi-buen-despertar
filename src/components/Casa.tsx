@@ -26,7 +26,7 @@ const serviciosCasa = [
   },
   {
     nombre: "Aire acondicionado",
-    descripcion: "En habitacion",
+    descripcion: "En habitación",
     icono:
       "/public/images/indoor_ac_split_air_conditioning_cooler_air_conditioner_icon_218667.svg",
   },
@@ -53,7 +53,7 @@ const serviciosCasa = [
   },
   {
     nombre: "Amplio espacio verde",
-    descripcion: "Disposicion de mesas y sillas plasticas en todo el parque",
+    descripcion: "Disposición de mesas y sillas plasticas en todo el parque",
     icono: "/public/images/yoga_outdoor_icon_262555.svg",
   },
 ];
@@ -143,7 +143,7 @@ export function Casa({ menu }: CasaProps) {
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
         <div className="block_title">
-          <h1>CASA</h1>
+          <h1 className="title_accommodation">CASA</h1>
         </div>
         <section className="intro">
           <h3>Casa de campo, alojamiento completo para hasta 8 personas.</h3>
@@ -159,7 +159,7 @@ export function Casa({ menu }: CasaProps) {
             <Carousel slides={mobileImages} />
           )}
         </section>
-        <h3 className="title_services">Servicios</h3>
+        <h1 className="title_services">Servicios</h1>
         <section className="description-services">
           {serviciosCasa.map((e, i) => (
             <article key={i} className="element">
@@ -170,7 +170,7 @@ export function Casa({ menu }: CasaProps) {
           ))}
         </section>
         <section className="info_important">
-          <h3 className="title_services2">Información Importante</h3>
+          <h1 className="title_service2">Información Importante</h1>
           <ul>
             <li>
               <h3>Horario de ingreso y salida</h3>
@@ -186,8 +186,8 @@ export function Casa({ menu }: CasaProps) {
             <li>
               <h3>Condiciones básicas de reserva</h3>
               <p>
-                - Precio por persona <br></br> - Seña del 30% para confirmar
-                reserva
+                - El precio es por persona <br></br> - Seña del 30% para
+                confirmar reserva
               </p>
             </li>
             <li>
@@ -211,6 +211,21 @@ export function Casa({ menu }: CasaProps) {
         <button className="mobile-reservation-button">
           RESERVAR - DISPONIBILIDAD
         </button>
+        <section className="video_facebook">
+          <h2 className="title-duplex">Descubrí la casa en detalle</h2>
+          <p className="description-duplex">
+            Mirá nuestros videos en Facebook y recorré cada rincón de la casa.
+            Te mostramos cómo es por dentro, sus vistas, comodidades y el
+            entorno natural que lo rodea 🌿
+          </p>
+          <a
+            href="https://www.facebook.com/share/v/17SSaakCb3/"
+            target="_blank"
+            className="btn-facebook"
+          >
+            Ver videos en Facebook
+          </a>
+        </section>
       </div>
     </>
   );
