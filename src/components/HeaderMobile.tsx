@@ -1,5 +1,6 @@
 import React from "react";
 import BotonHamburguesa from "./BotonHamburguesa";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   menu: boolean;
@@ -13,11 +14,14 @@ export function HeaderMobile({ menu, setMenu }: HeaderProps) {
 
   return (
     <div className="header">
-      <img
-        className="logo_img"
-        src="/public/images/android-chrome-512x512.png"
-        alt="icono de la página"
-      />
+      <Link to="/">
+        <img
+          className="logo_img"
+          src="/public/images/android-chrome-512x512.png"
+          alt="icono de la página"
+        />
+      </Link>
+
       <BotonHamburguesa menu={menu} toggleMenu={toggleMenu} />
     </div>
   );

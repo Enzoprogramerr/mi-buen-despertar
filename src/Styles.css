@@ -25,11 +25,33 @@ body {
   overflow-x: hidden;
 }
 
-h2 {
+h2,
+h3,
+h4 {
   font-family: "Inter", sans-serif;
+}
+
+.inicio h1 {
   font-weight: 400;
   font-style: italic;
-  font-size: var(--font-title) !important;
+  font-size: var(--font-title);
+  color: #6d3918;
+  line-height: normal;
+}
+
+.inicio h2 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--font-large);
+  color: #6d3918;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+section {
+  margin: var(--space-md) 0;
 }
 
 .cont_principal {
@@ -188,14 +210,16 @@ h2 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5); /*oscurece un poco la imagen */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
 }
 
 .inicio-title {
+  font-family: "Inter", sans-serif;
   font-size: 3rem;
   margin-bottom: 10px;
+  color: white;
 }
 
 .inicio-subtitle {
@@ -270,9 +294,16 @@ h2 {
 }
 
 .carrousel_conten {
-  height: 50rem;
+  min-height: 45rem;
   padding-top: 1rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.4);
+  height: 100%;
+}
+
+.carousel-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .slider-animated {
@@ -286,13 +317,27 @@ h2 {
 
 .experiencias {
   height: auto;
-  padding: var(--space-md) 0;
 }
 
 .experiencias h2 {
   padding-top: 3rem;
   color: #6d3918;
   font-size: var(--font-title);
+  text-align: center;
+}
+
+.titleref {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
+    box-shadow 1s ease-in-out;
+  text-align: center;
+}
+
+.titleref.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
 }
 
 .lista-actividades {
@@ -388,6 +433,145 @@ h2 {
   display: none;
 }
 
+.title_accommodation {
+  min-height: 5rem;
+  background-color: white;
+  text-align: center;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0 1rem;
+}
+
+.block_title h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.title_services {
+  text-align: center;
+  margin: 5rem 0 3rem 0;
+}
+
+.description-services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.element {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.element h3 {
+  font-weight: 600;
+}
+
+.element img {
+  width: 6rem;
+  height: 6rem;
+  margin-top: 1rem;
+}
+
+.intro {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.intro h3 {
+  font-weight: 600;
+  color: #6d3918;
+  margin-bottom: 10px;
+}
+
+.intro h4 {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mobile-reservation-button {
+  display: block;
+  width: 90%;
+  margin: 1.5em auto;
+  padding: 1em;
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #8b6f4e, #bca48a);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  letter-spacing: 0.4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-reservation-button:hover {
+  background: linear-gradient(135deg, #a88c6f, #8b6f4e);
+  transform: scale(1.02);
+}
+
+.title_service2 {
+  text-align: center;
+  margin: 6rem 0 4rem 0;
+}
+
+.footer__contact a {
+  text-decoration: none;
+}
+
+.title_terms {
+  min-height: 5rem;
+  background-color: white;
+  text-align: center;
+  margin: var(--space-xxl) 0;
+  padding: 0 1rem;
+}
+
+.containerTerminos {
+  margin: var(--space-md);
+}
+
+.containerTerminos h1 {
+  text-align: center;
+  margin: var(--space-xxl) 0;
+}
+
+.containerTerminos header {
+  margin: 0;
+}
+
+.video_facebook {
+  margin: 1rem;
+}
+
+.btn-facebook {
+  display: inline-block;
+  background-color: #1877f2;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-small);
+}
+
+.btn-facebook:hover {
+  background-color: #145dbf;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-button {
     display: none;
@@ -478,7 +662,13 @@ h2 {
   }
 
   .galery {
-    margin: 3rem;
+    margin: 3rem 0;
+    height: 54rem;
+  }
+
+  .one-container {
+    height: 100%;
+    width: 63%;
   }
 
   .map-section {
@@ -508,19 +698,6 @@ h2 {
     margin: 1rem 0;
   }
 
-  .titleref {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
-      box-shadow 1s ease-in-out;
-  }
-
-  .titleref.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.5s;
-  }
-
   .wp-div a {
     transition: transform 0.3s ease;
   }
@@ -528,17 +705,53 @@ h2 {
     transform: translateY(-4px);
   }
 
+  .block_title {
+    margin: 5rem 0 0.5rem 0;
+  }
+
   .description_image {
-    font-size: 1.125rem; /* text-lg */
-    font-weight: 400; /* font-semibold */
-    position: relative; /* para posicionar elementos internos si lo necesitás */
+    font-size: var(--font-large);
+    font-weight: 400;
+    position: relative;
     color: white;
-    background-color: rgba(0, 0, 0, 0.25); /* fondo oscuro suave */
+    background-color: rgba(0, 0, 0, 0.25);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: background-color 0.3s ease, opacity 0.3s ease;
   }
-  /* 
-  TODO-1 achicar imagen de carrousel mobile. de alto 500px // las imagenes dbene tener un 450 de ancho, 720 alto CORTARLAS.
- */
+
+  .container-image {
+    height: 54rem;
+    width: 56rem;
+  }
+
+  .description-services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .title_services {
+    margin: 10rem 0 4rem 0;
+  }
+
+  .title_service2 {
+    margin: 7rem 0 4rem 0;
+  }
+
+  .mobile-reservation-button {
+    width: 30%;
+    margin: 2.5em auto;
+  }
+
+  /*
+  TODO-5 Boton de reserva que abra un popap y aparezca el calendario.
+  TODO-6 armar pdf de condiciones.
+  TODO-7 Agregar redireccion en botones de reserva.
+  TODO.8 Agregar redireccion de video.
+  */
+}
+
+@media (max-width: 800px) {
+  .ul-header-desk {
+    gap: 2rem;
+  }
 }

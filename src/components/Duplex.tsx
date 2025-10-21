@@ -1,13 +1,12 @@
-import { Carousel } from "../components/Carousel";
-import { CarouselMobile } from "../components/CarouselMobile";
 import { useIsMobile } from "../hooks/useIsMobile";
-import "../Styles.css";
+import { CarouselMobile } from "./CarouselMobile";
+import { Carousel } from "./Carousel";
 
-const serviciosCasa = [
+const serviciosDuplex = [
   {
-    nombre: "Cocina y horno",
-    descripcion: "Con horno, vajilla, heladera y microondas",
-    icono: "/public/images/icon_cocina.svg",
+    nombre: "Anafe a gas",
+    descripcion: "Con dos hornallas, vajilla, heladera y microondas",
+    icono: "/public/images/anafe.ico",
   },
   {
     nombre: "Cochera",
@@ -38,12 +37,12 @@ const serviciosCasa = [
   },
   {
     nombre: "Calefacción",
-    descripcion: "Garrafera con pantalla",
+    descripcion: "Calefactor",
     icono: "/public/images/heating_86243.svg",
   },
   {
     nombre: "Asador",
-    descripcion: "Asador privado y techado",
+    descripcion: "Asador techado",
     icono: "/public/images/food_cooking_grill_beer_jar_icon_259017.svg",
   },
   {
@@ -58,95 +57,90 @@ const serviciosCasa = [
   },
 ];
 
-const mobileImages = [
+const duplexImage = [
   {
     key: 1,
-    src: "/public/images/Galeria/casa_frente_mobile.webp",
-    alt: "Vista frente casa",
+    src: "/public/images/Galeria/depto_frente_final.webp",
+    alt: "Vista duplex",
     loading: "lazy",
   },
   {
     key: 2,
-    src: "/public/images/Galeria/casa_cochera.webp",
-    alt: "Vista de cochera casa",
+    src: "/public/images/Galeria/depto_cochera.webp",
+    alt: "Vista cochera",
     loading: "lazy",
   },
   {
     key: 3,
-    src: "/public/images/Galeria/casa_comedor_1.2.webp",
-    alt: "Comedor de casa",
+    src: "/public/images/Galeria/depto_comedor.webp",
+    alt: "Comedor",
     loading: "lazy",
   },
   {
     key: 4,
-    src: "/public/images/Galeria/casa_comedor_1.webp",
-    alt: "Comedor de casa",
+    src: "/public/images/Galeria/depto_dormi.webp",
+    alt: "Dormitorio",
     loading: "lazy",
   },
   {
     key: 5,
-    src: "/public/images/Galeria/casa_cocina.webp",
-    alt: "Cocina",
+    src: "/public/images/Galeria/balcon.webp",
+    alt: "Vista balcon",
     loading: "lazy",
   },
   {
     key: 6,
-    src: "/public/images/Galeria/cas_hab_1.jpg",
-    alt: "Habitacion a",
-    loading: "lazy",
-  },
-  {
-    key: 7,
-    src: "/public/images/Galeria/casa_hab.1.2.webp",
-    alt: "Habitacion a",
-    loading: "lazy",
-  },
-  {
-    key: 8,
-    src: "/public/images/Galeria/casa_hab_2.1.webp",
-    alt: "Habitacion b",
-    loading: "lazy",
-  },
-  {
-    key: 9,
-    src: "/public/images/Galeria/casa_hab_2.2.webp",
-    alt: "Habitacion b",
-    loading: "lazy",
-  },
-  {
-    key: 10,
-    src: "/public/images/Galeria/baño_final.webp",
+    src: "/public/images/Galeria/depto_baño_1.2.webp",
     alt: "Baño",
     loading: "lazy",
   },
   {
-    key: 11,
-    src: "/public/images/Galeria/patio_completa_mobile.webp",
-    alt: "Vista patio completa",
+    key: 7,
+    src: "/public/images/Galeria/depto_baño_1.1.webp",
+    alt: "",
     loading: "lazy",
   },
   {
-    key: 12,
-    src: "/public/images/Galeria/piletajpg.jpg",
-    alt: "Vista de pileta",
+    key: 8,
+    src: "/public/images/Galeria/patio duplex.webp",
+    alt: "Vista patio",
+    loading: "lazy",
+  },
+  {
+    key: 9,
+    src: "/public/images/Galeria/patio_duplex2.webp",
+    alt: "Vista patio",
+    loading: "lazy",
+  },
+  {
+    key: 10,
+    src: "/public/images/Galeria/pileta_depto.webp",
+    alt: "Vista patio-pileta",
+    loading: "lazy",
+  },
+  {
+    key: 11,
+    src: "/public/images/Galeria/patio_mesita.webp",
+    alt: "Patio",
     loading: "lazy",
   },
 ];
 
-interface CasaProps {
+interface DuplexProps {
   menu: boolean;
 }
 
-export function Casa({ menu }: CasaProps) {
+export function Duplex({ menu }: DuplexProps) {
   const isMobile = useIsMobile();
+
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
         <div className="block_title">
-          <h1 className="title_accommodation">CASA</h1>
+          <h1 className="title_accommodation">DUPLEX</h1>
         </div>
         <section className="intro">
-          <h3>Casa de campo, alojamiento completo para hasta 8 personas.</h3>
+          <h3>Duplex, alojamiento completo para hasta 4 personas.</h3>
           <h4>
             Despertá rodeado de sierras, silencio y calidez. Ideal para
             reconectar con la naturaleza y descansar profundamente.
@@ -154,14 +148,14 @@ export function Casa({ menu }: CasaProps) {
         </section>
         <section className="galery">
           {isMobile ? (
-            <CarouselMobile images={mobileImages} />
+            <CarouselMobile images={duplexImage} />
           ) : (
-            <Carousel slides={mobileImages} />
+            <Carousel slides={duplexImage} />
           )}
         </section>
         <h1 className="title_services">Servicios</h1>
         <section className="description-services">
-          {serviciosCasa.map((e, i) => (
+          {serviciosDuplex.map((e, i) => (
             <article key={i} className="element">
               <h3>{e.nombre}</h3>
               {e.descripcion && <p>{e.descripcion}</p>}
@@ -186,8 +180,8 @@ export function Casa({ menu }: CasaProps) {
             <li>
               <h3>Condiciones básicas de reserva</h3>
               <p>
-                - El precio es por persona <br></br> - Seña del 30% para
-                confirmar reserva
+                - Precio por persona <br></br> - Seña del 30% para confirmar
+                reserva
               </p>
             </li>
             <li>
@@ -204,31 +198,14 @@ export function Casa({ menu }: CasaProps) {
             </li>
             <li>
               <h3>Precios</h3>
-              <p>- $60.000 por persona.</p>
+              <p>- $40.000 por persona.</p>
             </li>
           </ul>
         </section>
         <button className="mobile-reservation-button">
           RESERVAR - DISPONIBILIDAD
         </button>
-        <section className="video_facebook">
-          <h2 className="title-duplex">Descubrí la casa en detalle</h2>
-          <p className="description-duplex">
-            Mirá nuestros videos en Facebook y recorré cada rincón de la casa.
-            Te mostramos cómo es por dentro, sus vistas, comodidades y el
-            entorno natural que lo rodea 🌿
-          </p>
-          <a
-            href="https://www.facebook.com/share/v/17SSaakCb3/"
-            target="_blank"
-            className="btn-facebook"
-          >
-            Ver videos en Facebook
-          </a>
-        </section>
       </div>
     </>
   );
 }
-
-export default Casa;

@@ -2,12 +2,14 @@ import { useEffect, useRef } from "react";
 import { CarouselMobile } from "./CarouselMobile";
 import { Carousel } from "./Carousel";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useScrollToHash } from "../hooks/useScrollToHash";
 
 interface InicioProps {
   menu: boolean;
 }
 
 export function Inicio({ menu }: InicioProps) {
+  useScrollToHash();
   const mapRef = useRef<HTMLIFrameElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => {
@@ -95,6 +97,18 @@ export function Inicio({ menu }: InicioProps) {
       alt: "Vista departamento",
       loading: "lazy",
     },
+    {
+      key: 4,
+      src: "/public/images/Galeria/techo_casa.webp",
+      alt: "Vista segunda cochera",
+      loading: "lazy",
+    },
+    {
+      key: 5,
+      src: "/public/images/Galeria/pileta_vistacompleta.webp",
+      alt: "Vista patio desde balcón",
+      loading: "lazy",
+    },
   ];
 
   /* const imagesFinal = useMemo(() => {
@@ -116,7 +130,9 @@ export function Inicio({ menu }: InicioProps) {
       <div className={`inicio ${menu ? "active" : ""}`}>
         <section className="inicio-container">
           <div className="overlay">
-            <h1 className="inicio-title">Desconectate, respirá y disfrutá.</h1>
+            <span className="inicio-title">
+              Desconectate, respirá y disfrutá.
+            </span>
             <p className="inicio-subtitle">
               En Cura Brochero te esperan paisajes soñados, tranquilidad serrana
               y la calidez de nuestra hospitalidad.
@@ -129,7 +145,7 @@ export function Inicio({ menu }: InicioProps) {
           </div>
         </section>
         <div className="subtitle">
-          <h2>Un adelanto de tu estadía</h2>
+          <h1>Un adelanto de tu estadía</h1>
         </div>
         <section className="galery">
           {isMobile ? (
@@ -139,7 +155,7 @@ export function Inicio({ menu }: InicioProps) {
           )}
         </section>
         <section id="ubi" className="map-section">
-          <h2 className="map-title">Ubicación de Mi Buen Despertar</h2>
+          <h1 className="map-title">Ubicación de Mi Buen Despertar</h1>
           <iframe
             ref={mapRef}
             className="map"
@@ -149,50 +165,48 @@ export function Inicio({ menu }: InicioProps) {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </section>
-        {
-          <section className="experiencias">
-            <h2 className="titleref" ref={titleRef}>
-              ¿Qué podés hacer en Cura Brochero?
-            </h2>
-            <ul className="lista-actividades">
-              <li>
-                <h3>🌊 Balnearios naturales</h3>
-                <p>
-                  Ríos cristalinos como Los Elefantes y El Perchel para
-                  relajarte y disfrutar del paisaje serrano.
-                </p>
-              </li>
-              <li>
-                <h3>🕍 Historia y cultura</h3>
-                <p>
-                  Visitá el Santuario del Cura Brochero y conocé su legado en la
-                  Casa Museo y Parque Temático.
-                </p>
-              </li>
-              <li>
-                <h3>🥾 Senderismo y cabalgatas</h3>
-                <p>
-                  Recorré los senderos serranos a pie o a caballo, ideales para
-                  conectar con la naturaleza.
-                </p>
-              </li>
-              <li>
-                <h3>🎶 Peñas y gastronomía</h3>
-                <p>
-                  Viví la cultura local con música folclórica, cabrito a la
-                  llama y dulces típicos.
-                </p>
-              </li>
-              <li>
-                <h3>🦅 Excursiones cercanas</h3>
-                <p>
-                  Conocé el Museo Rocsen, el Dique La Viña o el Parque Quebrada
-                  del Condorito.
-                </p>
-              </li>
-            </ul>
-          </section>
-        }
+        <section className="experiencias" id="actividades">
+          <h1 className="titleref" ref={titleRef}>
+            ¿Qué podés hacer en Cura Brochero?
+          </h1>
+          <ul className="lista-actividades">
+            <li>
+              <h3>🌊 Balnearios naturales</h3>
+              <p>
+                Ríos cristalinos como Los Elefantes y El Perchel para relajarte
+                y disfrutar del paisaje serrano.
+              </p>
+            </li>
+            <li>
+              <h3>🕍 Historia y cultura</h3>
+              <p>
+                Visitá el Santuario del Cura Brochero y conocé su legado en la
+                Casa Museo y Parque Temático.
+              </p>
+            </li>
+            <li>
+              <h3>🥾 Senderismo y cabalgatas</h3>
+              <p>
+                Recorré los senderos serranos a pie o a caballo, ideales para
+                conectar con la naturaleza.
+              </p>
+            </li>
+            <li>
+              <h3>🎶 Peñas y gastronomía</h3>
+              <p>
+                Viví la cultura local con música folclórica, cabrito a la llama
+                y dulces típicos.
+              </p>
+            </li>
+            <li>
+              <h3>🦅 Excursiones cercanas</h3>
+              <p>
+                Conocé el Museo Rocsen, el Dique La Viña o el Parque Quebrada
+                del Condorito.
+              </p>
+            </li>
+          </ul>
+        </section>
         <div className="wp-div">
           <a href="https://wa.me/3516457961">
             <p>¿Dudas? Contáctenos...</p>
