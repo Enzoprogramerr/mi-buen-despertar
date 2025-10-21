@@ -27,11 +27,6 @@ export function HeaderDesktop() {
             </Link>
           </li>
           <li className="li-header-desk">
-            <Link to="/tarifa" className="navbar-a">
-              Tarifa
-            </Link>
-          </li>
-          <li className="li-header-desk">
             <a href="#contacto" className="navbar-a">
               Contacto
             </a>

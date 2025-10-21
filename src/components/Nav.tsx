@@ -38,11 +38,6 @@ export function Navbar({ menu, setMenu }: NavProps) {
             </Link>
           </li>
           <li className="navbar-li">
-            <a href="" className="navbar-a" onClick={toggleMenu}>
-              Tarifas
-            </a>
-          </li>
-          <li className="navbar-li">
             <a href="#contacto" className="navbar-a" onClick={toggleMenu}>
               Contacto
             </a>
