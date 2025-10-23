@@ -522,6 +522,10 @@ section {
   transform: scale(1.02);
 }
 
+.info_container {
+  padding: 0 1rem;
+}
+
 .title_service2 {
   text-align: center;
   margin: 6rem 0 4rem 0;
@@ -553,7 +557,7 @@ section {
 }
 
 .video_facebook {
-  margin: 1rem;
+  margin: var(--space-md) 0;
 }
 
 .btn-facebook {
@@ -570,6 +574,32 @@ section {
 
 .btn-facebook:hover {
   background-color: #145dbf;
+}
+
+.info_calendar {
+  margin: var(--space-md) 0;
+}
+
+.section_calendar {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar_container {
+  width: 80%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.reservation {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f8ff;
+  border-left: 4px solid #0077b6;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -743,10 +773,11 @@ section {
   }
 
   /*
-  TODO-5 Boton de reserva que abra un popap y aparezca el calendario.
   TODO-6 armar pdf de condiciones.
   TODO-7 Agregar redireccion en botones de reserva.
   TODO.8 Agregar redireccion de video.
+  TODO-9 OPCION COLOR DE PAGINA #e7ab85
+  TODO-10 corregir funcionamiento de calendario y darle color a ocupados.
   */
 }
 

@@ -2,6 +2,7 @@ import { Carousel } from "../components/Carousel";
 import { CarouselMobile } from "../components/CarouselMobile";
 import { useIsMobile } from "../hooks/useIsMobile";
 import "../Styles.css";
+import Calendar from "./Calendar";
 
 const serviciosCasa = [
   {
@@ -169,63 +170,75 @@ export function Casa({ menu }: CasaProps) {
             </article>
           ))}
         </section>
-        <section className="info_important">
-          <h1 className="title_service2">Información Importante</h1>
-          <ul>
-            <li>
-              <h3>Horario de ingreso y salida</h3>
-              <p>
-                - Check-in: desde las 10:00 hs <br></br> - Check-out: hasta las
-                13:00 hs
-              </p>
-            </li>
-            <li>
-              <h3>Politica de mascotas</h3>
-              <p>- Se aceptan mascotas pequeñas</p>
-            </li>
-            <li>
-              <h3>Condiciones básicas de reserva</h3>
-              <p>
-                - El precio es por persona <br></br> - Seña del 30% para
-                confirmar reserva
-              </p>
-            </li>
-            <li>
-              <h3>Al reservar</h3>
-              <p>
-                - Al realizar la reserva de nuestros servicios, el cliente
-                acepta y reconoce todos los{" "}
-                <a href="">Términos y Condiciones</a>.
-              </p>
-              <p>
-                - Ofrecemos únicamente servicio de alojamiento, pero las cabañas
-                cuentan con una cocina completamente equipada para su comodidad.
-              </p>
-            </li>
-            <li>
-              <h3>Precios</h3>
-              <p>- $60.000 por persona.</p>
-            </li>
-          </ul>
-        </section>
-        <button className="mobile-reservation-button">
-          RESERVAR - DISPONIBILIDAD
-        </button>
-        <section className="video_facebook">
-          <h2 className="title-duplex">Descubrí la casa en detalle</h2>
-          <p className="description-duplex">
-            Mirá nuestros videos en Facebook y recorré cada rincón de la casa.
-            Te mostramos cómo es por dentro, sus vistas, comodidades y el
-            entorno natural que lo rodea 🌿
+        <div className="info_container">
+          <section className="info_important">
+            <h1 className="title_service2">Información Importante</h1>
+            <ul>
+              <li>
+                <h3>Horario de ingreso y salida</h3>
+                <p>
+                  - Check-in: desde las 10:00 hs <br></br> - Check-out: hasta
+                  las 13:00 hs
+                </p>
+              </li>
+              <li>
+                <h3>Politica de mascotas</h3>
+                <p>- Se aceptan mascotas pequeñas</p>
+              </li>
+              <li>
+                <h3>Condiciones básicas de reserva</h3>
+                <p>
+                  - El precio es por persona <br></br> - Seña del 30% para
+                  confirmar reserva
+                </p>
+              </li>
+              <li>
+                <h3>Al reservar</h3>
+                <p>
+                  - Al realizar la reserva de nuestros servicios, el cliente
+                  acepta y reconoce todos los{" "}
+                  <a href="">Términos y Condiciones</a>.
+                </p>
+                <p>
+                  - Ofrecemos únicamente servicio de alojamiento, pero las
+                  cabañas cuentan con una cocina completamente equipada para su
+                  comodidad.
+                </p>
+              </li>
+              <li>
+                <h3>Precios</h3>
+                <p>- $60.000 por persona.</p>
+              </li>
+            </ul>
+          </section>
+          <button className="mobile-reservation-button">
+            RESERVAR - DISPONIBILIDAD
+          </button>
+          <section className="video_facebook">
+            <h2 className="title-duplex">Descubrí la casa en detalle</h2>
+            <p className="description-duplex">
+              Mirá nuestros videos en Facebook y recorré cada rincón de la casa.
+              Te mostramos cómo es por dentro, sus vistas, comodidades y el
+              entorno natural que lo rodea 🌿
+            </p>
+            <a
+              href="https://www.facebook.com/share/v/17SSaakCb3/"
+              target="_blank"
+              className="btn-facebook"
+            >
+              Ver videos en Facebook
+            </a>
+          </section>
+          <section className="section_calendar">
+            <Calendar></Calendar>
+          </section>
+          <p className="info_calendar">
+            Las fechas marcadas en rojo indican que ya han sido reservadas y no
+            están disponibles para nuevas solicitudes. Si estás planificando tu
+            estadía, te recomendamos elegir días que no estén resaltados para
+            asegurar tu lugar.
           </p>
-          <a
-            href="https://www.facebook.com/share/v/17SSaakCb3/"
-            target="_blank"
-            className="btn-facebook"
-          >
-            Ver videos en Facebook
-          </a>
-        </section>
+        </div>
       </div>
     </>
   );
