@@ -602,6 +602,23 @@ section {
   font-size: 0.95rem;
 }
 
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3; /* mantiene proporción sin usar padding-bottom */
+  border: none;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-button {
     display: none;
@@ -772,6 +789,15 @@ section {
     margin: 2.5em auto;
   }
 
+  .calendar-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .calendar-container iframe {
+    aspect-ratio: 3 / 2; /* más compacto en desktop */
+  }
   /*
   TODO-6 armar pdf de condiciones.
   TODO-7 Agregar redireccion en botones de reserva.

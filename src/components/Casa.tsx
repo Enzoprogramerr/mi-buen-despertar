@@ -2,7 +2,7 @@ import { Carousel } from "../components/Carousel";
 import { CarouselMobile } from "../components/CarouselMobile";
 import { useIsMobile } from "../hooks/useIsMobile";
 import "../Styles.css";
-import Calendar from "./Calendar";
+import CalendarGoogle from "./CalendarGoogle";
 
 const serviciosCasa = [
   {
@@ -211,9 +211,6 @@ export function Casa({ menu }: CasaProps) {
               </li>
             </ul>
           </section>
-          <button className="mobile-reservation-button">
-            RESERVAR - DISPONIBILIDAD
-          </button>
           <section className="video_facebook">
             <h2 className="title-duplex">Descubrí la casa en detalle</h2>
             <p className="description-duplex">
@@ -229,15 +226,19 @@ export function Casa({ menu }: CasaProps) {
               Ver videos en Facebook
             </a>
           </section>
-          <section className="section_calendar">
-            <Calendar></Calendar>
+          <section className="calendar-container">
+            <h2>Calendario de disponibilidad</h2>
+            <CalendarGoogle />
+            <p className="info_calendar">
+              - Las fechas marcadas en rojo indican que ya han sido reservadas y
+              no están disponibles para nuevas solicitudes. Si estás
+              planificando tu estadía, te recomendamos elegir días que no estén
+              resaltados para asegurar tu lugar.
+            </p>
           </section>
-          <p className="info_calendar">
-            Las fechas marcadas en rojo indican que ya han sido reservadas y no
-            están disponibles para nuevas solicitudes. Si estás planificando tu
-            estadía, te recomendamos elegir días que no estén resaltados para
-            asegurar tu lugar.
-          </p>
+          <button className="mobile-reservation-button">
+            RESERVAR - DISPONIBILIDAD
+          </button>
         </div>
       </div>
     </>
