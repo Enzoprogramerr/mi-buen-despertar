@@ -615,7 +615,7 @@ section {
 .calendar-container iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3; /* mantiene proporción sin usar padding-bottom */
+  aspect-ratio: 4 / 3;
   border: none;
 }
 
@@ -800,10 +800,10 @@ section {
   }
   /*
   TODO-6 armar pdf de condiciones.
-  TODO-7 Agregar redireccion en botones de reserva.
-  TODO.8 Agregar redireccion de video.
+  TODO-7 Al apretar reservar abre formulario donde capta nombre completo, fechas y monto. 
+  Para que se forme un mensaje predeterminado para whatsapp y sea enviado a quien corresponda.
+  TODO.8 Agregar redireccion de TODOS LOS video.
   TODO-9 OPCION COLOR DE PAGINA #e7ab85
-  TODO-10 corregir funcionamiento de calendario y darle color a ocupados.
   */
 }
 

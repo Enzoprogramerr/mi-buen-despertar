@@ -27,7 +27,7 @@ const serviciosCasa = [
   },
   {
     nombre: "Aire acondicionado",
-    descripcion: "En habitación",
+    descripcion: "En ambas habitaciones",
     icono:
       "/public/images/indoor_ac_split_air_conditioning_cooler_air_conditioner_icon_218667.svg",
   },
@@ -178,18 +178,18 @@ export function Casa({ menu }: CasaProps) {
                 <h3>Horario de ingreso y salida</h3>
                 <p>
                   - Check-in: desde las 10:00 hs <br></br> - Check-out: hasta
-                  las 13:00 hs
+                  las 13:00 hs.
                 </p>
               </li>
               <li>
                 <h3>Politica de mascotas</h3>
-                <p>- Se aceptan mascotas pequeñas</p>
+                <p>- Se aceptan mascotas pequeñas.</p>
               </li>
               <li>
                 <h3>Condiciones básicas de reserva</h3>
                 <p>
-                  - El precio es por persona <br></br> - Seña del 30% para
-                  confirmar reserva
+                  - El precio es por persona. <br></br> - Seña del 30% para
+                  confirmar reserva.
                 </p>
               </li>
               <li>
@@ -204,6 +204,7 @@ export function Casa({ menu }: CasaProps) {
                   cabañas cuentan con una cocina completamente equipada para su
                   comodidad.
                 </p>
+                <p>- Debe llevar ropa blanca (toallas, sábanas y fundas).</p>
               </li>
               <li>
                 <h3>Precios</h3>

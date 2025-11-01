@@ -1,6 +1,7 @@
 import { useIsMobile } from "../hooks/useIsMobile";
 import { CarouselMobile } from "./CarouselMobile";
 import { Carousel } from "./Carousel";
+import CalendarDuplex from "./CalendarDuplex";
 
 const serviciosDuplex = [
   {
@@ -201,6 +202,16 @@ export function Duplex({ menu }: DuplexProps) {
               <p>- $40.000 por persona.</p>
             </li>
           </ul>
+        </section>
+        <section className="calendar-container">
+          <h2>Calendario de disponibilidad</h2>
+          <CalendarDuplex />
+          <p className="info_calendar">
+            - Las fechas marcadas en rojo indican que ya han sido reservadas y
+            no están disponibles para nuevas solicitudes. Si estás planificando
+            tu estadía, te recomendamos elegir días que no estén resaltados para
+            asegurar tu lugar.
+          </p>
         </section>
         <button className="mobile-reservation-button">
           RESERVAR - DISPONIBILIDAD

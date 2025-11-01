@@ -14,10 +14,10 @@ export default function CalendarGoogle() {
   return (
     <iframe
       key={reloadKey}
-      src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FArgentina%2FCordoba&showPrint=0&src=YWxxdWlsZXJicm9jaGVyb0BnbWFpbC5jb20&color=%23039be5"
-      frameBorder="0"
-      scrolling="no"
-      title="Calendario de reservas casa"
+      src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FArgentina%2FCordoba&showPrint=0&src=YWMyY2RmODQ0MzQ5YmE2ZGVlZDgwNjVkNTY3NzAxMGM0MWI3ZGIwN2U1NDRjYmI2NGNhZTJkMzZlMDg2NDNjOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d50000"
+      width="800"
+      height="600"
+      title="Calendario de reservas duplex"
     ></iframe>
   );
 }
