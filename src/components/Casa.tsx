@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Carousel } from "../components/Carousel";
 import { CarouselMobile } from "../components/CarouselMobile";
 import { useIsMobile } from "../hooks/useIsMobile";
 import "../Styles.css";
 import CalendarGoogle from "./CalendarGoogle";
+import Reserva from "./Reserva";
 
 const serviciosCasa = [
   {
@@ -140,6 +142,12 @@ interface CasaProps {
 
 export function Casa({ menu }: CasaProps) {
   const isMobile = useIsMobile();
+
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleReserva = () => {
+    setOpen(!isOpen);
+  };
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
@@ -237,9 +245,17 @@ export function Casa({ menu }: CasaProps) {
               resaltados para asegurar tu lugar.
             </p>
           </section>
-          <button className="mobile-reservation-button">
-            RESERVAR - DISPONIBILIDAD
-          </button>
+          <section className="popup">
+            <button
+              className="mobile-reservation-button"
+              onClick={() => {
+                setOpen(!isOpen);
+              }}
+            >
+              RESERVAR - DISPONIBILIDAD
+            </button>
+            <Reserva isOpen={isOpen} onClose={toggleReserva}></Reserva>
+          </section>
         </div>
       </div>
     </>
