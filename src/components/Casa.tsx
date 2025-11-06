@@ -151,7 +151,7 @@ export function Casa({ menu }: CasaProps) {
   };
 
   const sendWP = (message: string) => {
-    const numero = "5493516457961";
+    const numero = "5493515488289";
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
