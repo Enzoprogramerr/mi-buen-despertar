@@ -429,6 +429,15 @@ section {
   font-size: 1.8rem;
 }
 
+.footer_one {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_one a {
+  text-decoration: none;
+}
+
 .carousel-status {
   display: none;
 }

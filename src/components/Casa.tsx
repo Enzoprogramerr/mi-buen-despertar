@@ -5,6 +5,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import "../Styles.css";
 import CalendarGoogle from "./CalendarGoogle";
 import Reserva from "./Reserva";
+import { Link } from "react-router-dom";
 
 const serviciosCasa = [
   {
@@ -145,15 +146,16 @@ export function Casa({ menu }: CasaProps) {
 
   const [isOpen, setOpen] = useState(false);
 
-  /*   const hidenButton () => {
-    if (isOpen == true){
-      "mobile-reservation-button
-    }
-  }  */
-
   const toggleReserva = () => {
     setOpen(!isOpen);
   };
+
+  const sendWP = (message: string) => {
+    const numero = "5493516457961";
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
@@ -211,7 +213,7 @@ export function Casa({ menu }: CasaProps) {
                 <p>
                   - Al realizar la reserva de nuestros servicios, el cliente
                   acepta y reconoce todos los{" "}
-                  <a href="">Términos y Condiciones</a>.
+                  <Link to="/terminos">Términos y condiciones.</Link>
                 </p>
                 <p>
                   - Ofrecemos únicamente servicio de alojamiento, pero las
@@ -222,7 +224,8 @@ export function Casa({ menu }: CasaProps) {
               </li>
               <li>
                 <h3>Precios</h3>
-                <p>- $60.000 por persona.</p>
+                <p>- Para 6 personas: $132.000 por día.</p>
+                <p>-Para 8 personas: $176.000 por día</p>
               </li>
             </ul>
           </section>
@@ -245,8 +248,8 @@ export function Casa({ menu }: CasaProps) {
             <h2>Calendario de disponibilidad</h2>
             <CalendarGoogle />
             <p className="info_calendar">
-              - Las fechas marcadas en rojo indican que ya han sido reservadas y
-              no están disponibles para nuevas solicitudes. Si estás
+              - Las fechas marcadas en color indican que ya han sido reservadas
+              y no están disponibles para nuevas solicitudes. Si estás
               planificando tu estadía, te recomendamos elegir días que no estén
               resaltados para asegurar tu lugar.
             </p>
@@ -258,9 +261,13 @@ export function Casa({ menu }: CasaProps) {
                 setOpen(!isOpen);
               }}
             >
-              RESERVAR - DISPONIBILIDAD
+              RESERVAR - ENVIAR WHATSAPP
             </button>
-            <Reserva isOpen={isOpen} onClose={toggleReserva}></Reserva>
+            <Reserva
+              isOpen={isOpen}
+              onClose={toggleReserva}
+              fullMessage={sendWP}
+            ></Reserva>
           </section>
         </div>
       </div>
