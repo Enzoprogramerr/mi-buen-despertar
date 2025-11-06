@@ -145,6 +145,12 @@ export function Casa({ menu }: CasaProps) {
 
   const [isOpen, setOpen] = useState(false);
 
+  /*   const hidenButton () => {
+    if (isOpen == true){
+      "mobile-reservation-button
+    }
+  }  */
+
   const toggleReserva = () => {
     setOpen(!isOpen);
   };
@@ -247,7 +253,7 @@ export function Casa({ menu }: CasaProps) {
           </section>
           <section className="popup">
             <button
-              className="mobile-reservation-button"
+              className={`mobile-reservation-button ${isOpen ? "hiden" : ""}`}
               onClick={() => {
                 setOpen(!isOpen);
               }}

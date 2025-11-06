@@ -1,3 +1,5 @@
+import "../Styles.css";
+
 interface ReservaProps {
   isOpen: boolean;
   onClose: () => void;
@@ -8,9 +10,9 @@ export default function Reserva({ isOpen, onClose }: ReservaProps) {
 
   return (
     <div className="container-reserv">
-      <button onClick={onClose}>
+      <button className="close_button" onClick={onClose}>
         <img
-          className="close_button"
+          className="close_button_img"
           src="/public/images/cancel_circle_close_delete_discard_file_x_icon_123219.svg"
           alt="cerrar"
         />
@@ -27,10 +29,10 @@ export default function Reserva({ isOpen, onClose }: ReservaProps) {
         <label htmlFor="FechaEgreso">Fecha de egreso:</label>
         <input id="FechaEgreso" />
         <button
-          className="button_reserv"
+          className="send_button"
           type="button" /* onClick={handleEnviarWhatsApp} */
         >
-          Reservar por WhatsApp
+          Enviar
         </button>
       </form>
     </div>
