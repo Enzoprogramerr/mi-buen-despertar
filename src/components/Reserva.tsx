@@ -31,6 +31,11 @@ export default function Reserva({
     fullMessage(message);
   };
 
+  const handleSendAndClose = () => {
+    sendMessage();
+    onClose();
+  };
+
   return (
     <div className="container-reserv">
       <button className="close_button" onClick={onClose}>
@@ -91,7 +96,11 @@ export default function Reserva({
             setMessageData({ ...messageData, egreso: e.target.value })
           }
         />
-        <button className="send_button" type="button" onClick={sendMessage}>
+        <button
+          className="send_button"
+          type="button"
+          onClick={handleSendAndClose}
+        >
           Enviar
         </button>
       </form>
