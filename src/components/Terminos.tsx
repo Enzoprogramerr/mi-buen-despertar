@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 interface TerminosProps {
@@ -5,6 +6,10 @@ interface TerminosProps {
 }
 
 export function Terminos({ menu }: TerminosProps) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={`inicio ${menu ? "active" : ""}`}>
       <header>
@@ -49,13 +54,12 @@ export function Terminos({ menu }: TerminosProps) {
         <section id="responsabilidad">
           <h2>Responsabilidad</h2>
           <p>
-            - Responsabilidad: Durante su estadía, el huésped asume la
-            responsabilidad por accidentes o incidentes que pudieran ocurrir en
-            la propiedad (como golpes, picaduras de insectos, filtraciones,
-            cortes de luz o agua, etc.). El propietario no será responsable por
-            daños a personas o bienes ocasionados por causas ajenas a su
-            control, incluyendo hechos fortuitos, fuerza mayor, robos o fallas
-            en los servicios públicos.
+            Durante su estadía, el huésped asume la responsabilidad por
+            accidentes o incidentes que pudieran ocurrir en la propiedad (como
+            golpes, picaduras de insectos, filtraciones, cortes de luz o agua,
+            etc.). El propietario no será responsable por daños a personas o
+            bienes ocasionados por causas ajenas a su control, incluyendo hechos
+            fortuitos, fuerza mayor, robos o fallas en los servicios públicos.
           </p>
         </section>
 

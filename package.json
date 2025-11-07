@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.19",
+    "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/interaction": "^6.1.19",
+    "@fullcalendar/react": "^6.1.19",
     "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/cli": "^4.1.13",
     "bootstrap": "^5.3.3",
