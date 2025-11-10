@@ -6,6 +6,7 @@ import "../Styles.css";
 import CalendarGoogle from "./CalendarGoogle";
 import Reserva from "./Reserva";
 import { Link } from "react-router-dom";
+import VideoFacebook from "./VideoFacebook";
 
 const serviciosCasa = [
   {
@@ -230,19 +231,15 @@ export function Casa({ menu }: CasaProps) {
             </ul>
           </section>
           <section className="video_facebook">
-            <h2 className="title-duplex">Descubrí la casa en detalle</h2>
-            <p className="description-duplex">
-              Mirá nuestros videos en Facebook y recorré cada rincón de la casa.
-              Te mostramos cómo es por dentro, sus vistas, comodidades y el
-              entorno natural que lo rodea 🌿
-            </p>
-            <a
-              href="https://www.facebook.com/share/v/17SSaakCb3/"
-              target="_blank"
-              className="btn-facebook"
+            <button
+              className={`send_button ${isOpen ? "hiden" : ""}`}
+              onClick={() => {
+                setOpen(!isOpen);
+              }}
             >
-              Ver videos en Facebook
-            </a>
+              Ver video de casa
+            </button>
+            <VideoFacebook></VideoFacebook>
           </section>
           <section className="calendar-container">
             <h2>Calendario de disponibilidad</h2>
