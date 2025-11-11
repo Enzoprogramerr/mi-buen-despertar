@@ -575,6 +575,7 @@ section {
 
 .video_facebook {
   margin: var(--space-md) 0;
+  height: 70rem;
 }
 
 .btn-facebook {
@@ -627,6 +628,7 @@ section {
   box-sizing: border-box;
   overflow: hidden;
   flex-direction: column;
+  padding: 0 1rem;
 }
 
 .calendar-container iframe {
@@ -692,6 +694,7 @@ section {
   align-self: end;
   border: none;
   background: none;
+  padding: 0;
 }
 
 .send_button {
@@ -722,9 +725,35 @@ section {
   display: none;
 }
 
-.video-wrapper > .fb-video {
+.video_contain {
   display: flex;
   justify-content: center;
+  height: 62rem;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.fb-video,
+.fb-video > span,
+.fb-video iframe {
+  width: 100% !important;
+  height: 100% !important;
+  /* max-width: 100%; */
+  display: block;
+}
+
+.fb_iframe_widget_fluid {
+  display: block;
+}
+
+.fb-video img {
+  height: 100% !important;
+  /* width: 100% !important; */
+  /* object-fit: contain ;*/
 }
 
 @media screen and (min-width: 768px) {

@@ -145,6 +145,11 @@ interface CasaProps {
 export function Casa({ menu }: CasaProps) {
   const isMobile = useIsMobile();
 
+  const [isOpenVideo, setOpenVideo] = useState(false);
+  const toggleVideo = () => {
+    setOpenVideo(!isOpenVideo);
+  };
+
   const [isOpen, setOpen] = useState(false);
 
   const toggleReserva = () => {
@@ -230,43 +235,44 @@ export function Casa({ menu }: CasaProps) {
               </li>
             </ul>
           </section>
-          <section className="video_facebook">
-            <button
-              className={`send_button ${isOpen ? "hiden" : ""}`}
-              onClick={() => {
-                setOpen(!isOpen);
-              }}
-            >
-              Ver video de casa
-            </button>
-            <VideoFacebook></VideoFacebook>
-          </section>
-          <section className="calendar-container">
-            <h2>Calendario de disponibilidad</h2>
-            <CalendarGoogle />
-            <p className="info_calendar">
-              - Las fechas marcadas en color indican que ya han sido reservadas
-              y no están disponibles para nuevas solicitudes. Si estás
-              planificando tu estadía, te recomendamos elegir días que no estén
-              resaltados para asegurar tu lugar.
-            </p>
-          </section>
-          <section className="popup">
-            <button
-              className={`mobile-reservation-button ${isOpen ? "hiden" : ""}`}
-              onClick={() => {
-                setOpen(!isOpen);
-              }}
-            >
-              RESERVAR - ENVIAR WHATSAPP
-            </button>
-            <Reserva
-              isOpen={isOpen}
-              onClose={toggleReserva}
-              fullMessage={sendWP}
-            ></Reserva>
-          </section>
         </div>
+        <button
+          className={`send_button ${isOpenVideo ? "hiden" : ""}`}
+          onClick={() => {
+            setOpenVideo(!isOpenVideo);
+          }}
+        >
+          Ver video de casa
+        </button>
+        <VideoFacebook
+          isOpenVideo={isOpenVideo}
+          onClose={toggleVideo}
+        ></VideoFacebook>
+        <section className="calendar-container">
+          <h2>Calendario de disponibilidad</h2>
+          <CalendarGoogle />
+          <p className="info_calendar">
+            - Las fechas marcadas en color indican que ya han sido reservadas y
+            no están disponibles para nuevas solicitudes. Si estás planificando
+            tu estadía, te recomendamos elegir días que no estén resaltados para
+            asegurar tu lugar.
+          </p>
+        </section>
+        <section className="popup">
+          <button
+            className={`mobile-reservation-button ${isOpen ? "hiden" : ""}`}
+            onClick={() => {
+              setOpen(!isOpen);
+            }}
+          >
+            RESERVAR - ENVIAR WHATSAPP
+          </button>
+          <Reserva
+            isOpen={isOpen}
+            onClose={toggleReserva}
+            fullMessage={sendWP}
+          ></Reserva>
+        </section>
       </div>
     </>
   );

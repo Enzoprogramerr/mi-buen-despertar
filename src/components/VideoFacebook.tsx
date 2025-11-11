@@ -11,7 +11,13 @@ declare global {
   }
 }
 
-export default function FacebookVideo() {
+interface ReservaVideo {
+  isOpenVideo: boolean;
+  onClose: () => void;
+}
+
+export default function FacebookVideo({ isOpenVideo, onClose }: ReservaVideo) {
+  if (!isOpenVideo) return null;
   useEffect(() => {
     // Definir fbAsyncInit sin appId
     window.fbAsyncInit = function () {
@@ -43,6 +49,13 @@ export default function FacebookVideo() {
     <section className="video_contain">
       <div id="fb-root"></div>
       <div className="video-wrapper">
+        <button className="close_button" onClick={onClose}>
+          <img
+            className="close_button_img"
+            src="/public/images/cancel_circle_close_delete_discard_file_x_icon_123219.svg"
+            alt="cerrar"
+          />
+        </button>
         <div
           className="fb-video"
           data-href="https://www.facebook.com/100063737036623/videos/786505419952543/"
