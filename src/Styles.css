@@ -731,7 +731,32 @@ section {
   height: 62rem;
 }
 
+.video-loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  font-size: 1.2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.fb-video.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fb-video.visible {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
 .video-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -742,7 +767,6 @@ section {
 .fb-video iframe {
   width: 100% !important;
   height: 100% !important;
-  /* max-width: 100%; */
   display: block;
 }
 
@@ -752,8 +776,6 @@ section {
 
 .fb-video img {
   height: 100% !important;
-  /* width: 100% !important; */
-  /* object-fit: contain ;*/
 }
 
 @media screen and (min-width: 768px) {
@@ -939,6 +961,16 @@ section {
   .container-reserv {
     max-width: 90rem;
   }
+
+  .video_contain {
+    height: 60rem;
+  }
+
+  .video-wrapper {
+    width: 70%;
+    height: 90%;
+  }
+
   /*
   TODO-6 armar pdf de condiciones.
   TODO.8 Agregar redireccion de TODOS LOS videos.

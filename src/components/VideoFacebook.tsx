@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 declare global {
   interface Window {
@@ -17,17 +17,17 @@ interface ReservaVideo {
 }
 
 export default function FacebookVideo({ isOpenVideo, onClose }: ReservaVideo) {
-  if (!isOpenVideo) return null;
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
-    // Definir fbAsyncInit sin appId
+    setIsLoaded(false); // reinicia al abrir
+
     window.fbAsyncInit = function () {
-      // Solo parseo, sin init
       if (window.FB && window.FB.XFBML) {
         window.FB.XFBML.parse();
       }
     };
 
-    // Cargar el SDK si no está presente
     if (!document.getElementById("facebook-jssdk")) {
       const script = document.createElement("script");
       script.id = "facebook-jssdk";
@@ -38,13 +38,20 @@ export default function FacebookVideo({ isOpenVideo, onClose }: ReservaVideo) {
       script.crossOrigin = "anonymous";
       document.body.appendChild(script);
     } else {
-      // Si ya está cargado, parsear directamente
       if (window.FB && window.FB.XFBML) {
         window.FB.XFBML.parse();
       }
     }
-  }, []);
 
+    // Simular carga con timeout (ya que no hay evento real del iframe)
+    const timeout = setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000); // ajustable
+
+    return () => clearTimeout(timeout);
+  }, [isOpenVideo]);
+
+  if (!isOpenVideo) return null;
   return (
     <section className="video_contain">
       <div id="fb-root"></div>
@@ -56,10 +63,13 @@ export default function FacebookVideo({ isOpenVideo, onClose }: ReservaVideo) {
             alt="cerrar"
           />
         </button>
+
+        {!isLoaded && <div className="video-loader">Cargando video...</div>}
+
         <div
-          className="fb-video"
+          className={`fb-video ${isLoaded ? "visible" : "hidden"}`}
           data-href="https://www.facebook.com/100063737036623/videos/786505419952543/"
-          data-width="400px"
+          data-width="400"
           data-allowfullscreen="true"
           data-autoplay="false"
           data-lazy="true"
