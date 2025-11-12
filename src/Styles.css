@@ -575,7 +575,6 @@ section {
 
 .video_facebook {
   margin: var(--space-md) 0;
-  height: 70rem;
 }
 
 .btn-facebook {
@@ -973,9 +972,8 @@ section {
 
   /*
   TODO-6 armar pdf de condiciones.
-  TODO.8 Agregar redireccion de TODOS LOS videos.
   TODO-9 OPCION COLOR DE PAGINA #e7ab85
-  TODO-10 Crear boton y abra video (aplicar lo mismo que en el componente reserva).
+  TODO-10 aplicar modal video a duplex.
   */
 }
 

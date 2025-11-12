@@ -228,7 +228,7 @@ export function Duplex({ menu }: DuplexProps) {
               el entorno natural que lo rodea 🌿
             </p>
             <a
-              href="https://www.facebook.com/share/v/17SSaakCb3/"
+              href="https://www.facebook.com/share/v/1WdhPuSRis/"
               target="_blank"
               className="btn-facebook"
             >
