@@ -55,25 +55,25 @@ export function Inicio({ menu }: InicioProps) {
   const mobileImages = [
     {
       key: 1,
-      src: "/public/images/Galeria/patio_completa_mobile.webp",
+      src: "/images/Galeria/patio_completa_mobile.webp",
       alt: "Vista patio completa",
       loading: "lazy",
     },
     {
       key: 2,
-      src: "/public/images/Galeria/casa_frente_mobile.webp",
+      src: "/images/Galeria/casa_frente_mobile.webp",
       alt: "Vista de casa",
       loading: "lazy",
     },
     {
       key: 3,
-      src: "/public/images/Galeria/Mobile/casa_comedor_1.2.webp",
+      src: "/images/Galeria/Mobile/casa_comedor_1.2.webp",
       alt: "Vista departamento",
       loading: "lazy",
     },
     {
       key: 4,
-      src: "/public/images/Galeria/Mobile/cas_hab_1.2.jpg",
+      src: "/images/Galeria/Mobile/cas_hab_1.2.jpg",
       alt: "Vista habitacion casa",
       loading: "lazy",
     },
@@ -81,50 +81,36 @@ export function Inicio({ menu }: InicioProps) {
   const desktopImages = [
     {
       key: 1,
-      src: "/public/images/Galeria/patio_completa_mobile.webp",
+      src: "/images/Galeria/patio_completa_mobile.webp",
       alt: "Vista patio completa",
       loading: "lazy",
     },
     {
       key: 2,
-      src: "/public/images/Galeria/casa_frente_mobile.webp",
+      src: "/images/Galeria/casa_frente_mobile.webp",
       alt: "Vista de casa",
       loading: "lazy",
     },
     {
       key: 3,
-      src: "/public/images/Galeria/depto_frente_final.webp",
+      src: "/images/Galeria/depto_frente_final.webp",
       alt: "Vista departamento",
       loading: "lazy",
     },
     {
       key: 4,
-      src: "/public/images/Galeria/techo_casa.webp",
+      src: "/images/Galeria/techo_casa.webp",
       alt: "Vista segunda cochera",
       loading: "lazy",
     },
     {
       key: 5,
-      src: "/public/images/Galeria/pileta_vistacompleta.webp",
+      src: "/images/Galeria/pileta_vistacompleta.webp",
       alt: "Vista patio desde balcón",
       loading: "lazy",
     },
   ];
 
-  /* const imagesFinal = useMemo(() => {
-    return baseImages.map((img) => {
-      if (img.key === 3) {
-        return {
-          ...img,
-          src: isMobile
-            ? "/public/images/Galeria/depto_frente.webp"
-            : "/public/images/Galeria/depto_frente_recortada.jpg",
-        };
-      }
-      return img;
-    });
-  }, [isMobile]);
- */
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
