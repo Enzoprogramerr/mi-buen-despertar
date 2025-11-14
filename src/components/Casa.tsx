@@ -83,19 +83,19 @@ const mobileImages = [
   },
   {
     key: 4,
-    src: "/images/Galeria/casa_comedor_1.webp",
+    src: "images/Galeria/casa_comedor_1.webp",
     alt: "Comedor de casa",
     loading: "lazy",
   },
   {
     key: 5,
-    src: "/images/Galeria/casa_cocina.webp",
+    src: "images/Galeria/casa_cocina.webp",
     alt: "Cocina",
     loading: "lazy",
   },
   {
     key: 6,
-    src: "/images/Galeria/cas_hab_1.jpg",
+    src: "images/Galeria/cas_hab_1.jpg",
     alt: "Habitacion a",
     loading: "lazy",
   },
