@@ -78,7 +78,7 @@ export function Inicio({ menu }: InicioProps) {
       loading: "lazy",
     },
   ];
-  const desktopImages = [
+  /* const desktopImages = [
     {
       key: 1,
       src: "images/Galeria/patio_completa_mobile.webp",
@@ -110,7 +110,7 @@ export function Inicio({ menu }: InicioProps) {
       loading: "lazy",
     },
   ];
-
+ */
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
