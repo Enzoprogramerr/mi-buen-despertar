@@ -65,19 +65,19 @@ const serviciosCasa = [
 const mobileImages = [
   {
     key: 1,
-    src: "mi-buen-despertar/images/Galeria/casa_frente_mobile.webp",
+    src: "./images/Galeria/casa_frente_mobile.webp",
     alt: "Vista frente casa",
     loading: "lazy",
   },
   {
     key: 2,
-    src: "/images/Galeria/casa_cochera.webp",
+    src: "./images/Galeria/casa_cochera.webp",
     alt: "Vista de cochera casa",
     loading: "lazy",
   },
   {
     key: 3,
-    src: "/dist/images/Galeria/casa_comedor_1.webp",
+    src: "./images/Galeria/casa_comedor_1.webp",
     alt: "Comedor de casa",
     loading: "lazy",
   },
