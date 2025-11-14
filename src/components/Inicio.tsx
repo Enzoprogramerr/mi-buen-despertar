@@ -55,25 +55,25 @@ export function Inicio({ menu }: InicioProps) {
   const mobileImages = [
     {
       key: 1,
-      src: "/images/Galeria/patio_completa_mobile.webp",
+      src: "images/Galeria/patio_completa_mobile.webp",
       alt: "Vista patio completa",
       loading: "lazy",
     },
     {
       key: 2,
-      src: "/images/Galeria/casa_frente_mobile.webp",
+      src: "images/Galeria/casa_frente_mobile.webp",
       alt: "Vista de casa",
       loading: "lazy",
     },
     {
       key: 3,
-      src: "/images/Galeria/Mobile/casa_comedor_1.2.webp",
+      src: "images/Galeria/Mobile/casa_comedor_1.2.webp",
       alt: "Vista departamento",
       loading: "lazy",
     },
     {
       key: 4,
-      src: "/images/Galeria/Mobile/cas_hab_1.2.jpg",
+      src: "images/Galeria/Mobile/cas_hab_1.2.jpg",
       alt: "Vista habitacion casa",
       loading: "lazy",
     },
@@ -81,31 +81,31 @@ export function Inicio({ menu }: InicioProps) {
   const desktopImages = [
     {
       key: 1,
-      src: "/images/Galeria/patio_completa_mobile.webp",
+      src: "images/Galeria/patio_completa_mobile.webp",
       alt: "Vista patio completa",
       loading: "lazy",
     },
     {
       key: 2,
-      src: "/images/Galeria/casa_frente_mobile.webp",
+      src: "images/Galeria/casa_frente_mobile.webp",
       alt: "Vista de casa",
       loading: "lazy",
     },
     {
       key: 3,
-      src: "/images/Galeria/depto_frente_final.webp",
+      src: "images/Galeria/depto_frente_final.webp",
       alt: "Vista departamento",
       loading: "lazy",
     },
     {
       key: 4,
-      src: "/images/Galeria/techo_casa.webp",
+      src: "images/Galeria/techo_casa.webp",
       alt: "Vista segunda cochera",
       loading: "lazy",
     },
     {
       key: 5,
-      src: "/images/Galeria/pileta_vistacompleta.webp",
+      src: "images/Galeria/pileta_vistacompleta.webp",
       alt: "Vista patio desde balcón",
       loading: "lazy",
     },
@@ -196,11 +196,7 @@ export function Inicio({ menu }: InicioProps) {
         <div className="wp-div">
           <a href="https://wa.me/3516457961">
             <p>¿Dudas? Contáctenos...</p>
-            <img
-              className="wp-icon"
-              src="/public/images/whatsapp.svg"
-              alt="Whatsapp"
-            />
+            <img className="wp-icon" src="images/whatsapp.svg" alt="Whatsapp" />
           </a>
         </div>
       </div>
