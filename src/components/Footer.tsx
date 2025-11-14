@@ -25,7 +25,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/instagram.svg" alt="Instagram" />
+            <img src="images/instagram.svg" alt="Instagram" />
             Instagram
           </a>
           <a
@@ -34,7 +34,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/facebook.svg" alt="Facebook" />
+            <img src="images/facebook.svg" alt="Facebook" />
             Facebook
           </a>
         </div>
