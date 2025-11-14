@@ -65,7 +65,7 @@ const serviciosCasa = [
 const mobileImages = [
   {
     key: 1,
-    src: "/images/Galeria/casa_frente_mobile.webp",
+    src: "mi-buen-despertar/images/Galeria/casa_frente_mobile.webp",
     alt: "Vista frente casa",
     loading: "lazy",
   },
