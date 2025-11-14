@@ -137,7 +137,7 @@ export function Inicio({ menu }: InicioProps) {
           {isMobile ? (
             <CarouselMobile images={mobileImages} />
           ) : (
-            <Carousel slides={desktopImages} />
+            <Carousel slides={mobileImages} />
           )}
         </section>
         <section id="ubi" className="map-section">
