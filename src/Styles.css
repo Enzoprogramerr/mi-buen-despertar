@@ -438,6 +438,11 @@ section {
   text-decoration: none;
 }
 
+.social_red {
+  height: 3rem;
+  width: 3rem;
+}
+
 .carousel-status {
   display: none;
 }

@@ -52,7 +52,7 @@ export function Inicio({ menu }: InicioProps) {
 
   const isMobile = useIsMobile();
 
-  const mobileImages = [
+  /* const mobileImages = [
     {
       key: 1,
       src: "images/Galeria/patio_completa_mobile.webp",
@@ -77,8 +77,8 @@ export function Inicio({ menu }: InicioProps) {
       alt: "Vista habitacion casa",
       loading: "lazy",
     },
-  ];
-  /* const desktopImages = [
+  ]; */
+  const desktopImages = [
     {
       key: 1,
       src: "images/Galeria/patio_completa_mobile.webp",
@@ -110,7 +110,7 @@ export function Inicio({ menu }: InicioProps) {
       loading: "lazy",
     },
   ];
- */
+
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
@@ -135,9 +135,9 @@ export function Inicio({ menu }: InicioProps) {
         </div>
         <section className="galery">
           {isMobile ? (
-            <CarouselMobile images={mobileImages} />
+            <CarouselMobile images={desktopImages} />
           ) : (
-            <Carousel slides={mobileImages} />
+            <Carousel slides={desktopImages} />
           )}
         </section>
         <section id="ubi" className="map-section">
