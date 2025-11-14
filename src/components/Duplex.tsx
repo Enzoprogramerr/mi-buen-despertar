@@ -195,10 +195,7 @@ export function Duplex({ menu }: DuplexProps) {
               </li>
               <li>
                 <h3>Condiciones básicas de reserva</h3>
-                <p>
-                  - Precio por persona <br></br> - Seña del 30% para confirmar
-                  reserva
-                </p>
+                <p>- Seña del 30% para confirmar reserva</p>
               </li>
               <li>
                 <h3>Al reservar</h3>

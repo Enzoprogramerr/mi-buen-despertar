@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://Enzoprogramerr.github.io/mi-buen-despertar",
+  base: "/mi-buen-despertar/",
 });

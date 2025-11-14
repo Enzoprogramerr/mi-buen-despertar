@@ -77,7 +77,7 @@ const mobileImages = [
   },
   {
     key: 3,
-    src: "/images/Galeria/casa_comedor_1.2.webp",
+    src: "/dist/images/Galeria/casa_comedor_1.webp",
     alt: "Comedor de casa",
     loading: "lazy",
   },
@@ -208,10 +208,7 @@ export function Casa({ menu }: CasaProps) {
               </li>
               <li>
                 <h3>Condiciones básicas de reserva</h3>
-                <p>
-                  - El precio es por persona. <br></br> - Seña del 30% para
-                  confirmar reserva.
-                </p>
+                <p>- Seña del 30% para confirmar reserva.</p>
               </li>
               <li>
                 <h3>Al reservar</h3>
