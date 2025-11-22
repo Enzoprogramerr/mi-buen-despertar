@@ -31,6 +31,7 @@ h4 {
   font-family: "Inter", sans-serif;
 }
 
+
 .inicio h1 {
   font-weight: 400;
   font-style: italic;
@@ -47,7 +48,7 @@ h4 {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 section {
@@ -129,7 +130,7 @@ section {
 }
 
 .navbar-a {
-  color: white;
+  color: #6d3918;
 }
 
 .navbar-a:hover {
@@ -396,7 +397,7 @@ section {
 }
 
 .footer {
-  background-color: #dd6519;
+  background-color: #6d3918;
   color: white;
   display: flex;
   flex-direction: column;
@@ -435,7 +436,7 @@ section {
 }
 
 .footer_one a {
-  text-decoration: none;
+  color: white;
 }
 
 .carousel-status {

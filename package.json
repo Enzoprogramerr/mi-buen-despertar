@@ -41,5 +41,18 @@
     "tailwindcss": "^4.1.13",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  }
+  },
+  "description": "Este proyecto utiliza saltos de línea **LF** para mantener compatibilidad entre sistemas y evitar conflictos en Git.   Las reglas de formato están definidas en `.editorconfig` y `.gitattributes`.",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enzoprogramerr/mi-buen-despertar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enzoprogramerr/mi-buen-despertar/issues"
+  },
+  "homepage": "https://github.com/Enzoprogramerr/mi-buen-despertar#readme"
 }
