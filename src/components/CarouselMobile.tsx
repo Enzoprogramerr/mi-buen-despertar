@@ -12,7 +12,7 @@ export function CarouselMobile({ images }: CarouselProps) {
       className="carousel"
       showThumbs={false}
       infiniteLoop={true}
-      autoPlay={false} // ❌ Desactiva el cambio automático
+      autoPlay={true} // ❌ Desactiva el cambio automático
       swipeable={false} // ❌ Desactiva el gesto táctil (swipe)
       emulateTouch={false} // ❌ Evita que el mouse simule swipe
       showArrows={true}

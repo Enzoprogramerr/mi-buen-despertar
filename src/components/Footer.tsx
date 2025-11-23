@@ -13,10 +13,10 @@ export function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          📞 +54 9 351 5488289
+           +54 9 351 5488289
         </a>
         <a href="mailto:contacto@mibuendespertar.com?subject=Reserva%20Mi%20Buen%20Despertar&body=Hola%2C%20quiero%20reservar%20una%20caba%C3%B1a.">
-          &#x1F4E7;&nbsp; contacto@mibuendespertar.com
+           contacto@mibuendespertar.com
         </a>
         <div className="footer_social">
           <a
