@@ -31,7 +31,6 @@ h4 {
   font-family: "Inter", sans-serif;
 }
 
-
 .inicio h1 {
   font-weight: 400;
   font-style: italic;
@@ -243,6 +242,11 @@ section {
   font-weight: bold;
   cursor: pointer;
   font-size: 1.6rem;
+  margin: 1rem;
+}
+
+.title-inicio {
+  display: block;
 }
 
 .map-section {
@@ -858,9 +862,13 @@ section {
   }
 
   .inicio-boton:hover {
-    color: #faf5f5;
-    background: #dd6519;
+    color: #572d12;
+    background: #e2cf85;
     transform: translateY(-4px);
+  }
+
+  .title-inicio {
+    display: inline;
   }
 
   .inicio-container {

@@ -3,6 +3,7 @@ import { CarouselMobile } from "./CarouselMobile";
 import { Carousel } from "./Carousel";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useScrollToHash } from "../hooks/useScrollToHash";
+import { Link } from "react-router-dom";
 
 interface InicioProps {
   menu: boolean;
@@ -52,32 +53,6 @@ export function Inicio({ menu }: InicioProps) {
 
   const isMobile = useIsMobile();
 
-  const mobileImages = [
-    {
-      key: 1,
-      src: "/public/images/Galeria/patio_completa_mobile.webp",
-      alt: "Vista patio completa",
-      loading: "lazy",
-    },
-    {
-      key: 2,
-      src: "/public/images/Galeria/casa_frente_mobile.webp",
-      alt: "Vista de casa",
-      loading: "lazy",
-    },
-    {
-      key: 3,
-      src: "/public/images/Galeria/Mobile/casa_comedor_1.2.webp",
-      alt: "Vista departamento",
-      loading: "lazy",
-    },
-    {
-      key: 4,
-      src: "/public/images/Galeria/Mobile/cas_hab_1.2.jpg",
-      alt: "Vista habitacion casa",
-      loading: "lazy",
-    },
-  ];
   const desktopImages = [
     {
       key: 1,
@@ -111,20 +86,6 @@ export function Inicio({ menu }: InicioProps) {
     },
   ];
 
-  /* const imagesFinal = useMemo(() => {
-    return baseImages.map((img) => {
-      if (img.key === 3) {
-        return {
-          ...img,
-          src: isMobile
-            ? "/public/images/Galeria/depto_frente.webp"
-            : "/public/images/Galeria/depto_frente_recortada.jpg",
-        };
-      }
-      return img;
-    });
-  }, [isMobile]);
- */
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
@@ -141,7 +102,17 @@ export function Inicio({ menu }: InicioProps) {
               Tus días perfectos empiezan acá.{" "}
               <strong>Reservá tu estadía con nosotros.</strong>
             </p>
-            <button className="inicio-boton">Consultar disponibilidad</button>
+            <Link to={"/casa"}>
+              <button className="inicio-boton">
+                Consultar disponibilidad casa
+              </button>
+            </Link>
+
+            <Link to={"/duplex"}>
+              <button className="inicio-boton">
+                Consultar disponibilidad duplex
+              </button>
+            </Link>
           </div>
         </section>
         <div className="subtitle">
@@ -149,13 +120,15 @@ export function Inicio({ menu }: InicioProps) {
         </div>
         <section className="galery">
           {isMobile ? (
-            <CarouselMobile images={mobileImages} />
+            <CarouselMobile images={desktopImages} />
           ) : (
             <Carousel slides={desktopImages} />
           )}
         </section>
         <section id="ubi" className="map-section">
-          <h1 className="map-title">Ubicación de Mi Buen Despertar</h1>
+          <h1 className="map-title">
+            Ubicación de <span className="title-inicio">Mi Buen Despertar</span>
+          </h1>
           <iframe
             ref={mapRef}
             className="map"
@@ -167,7 +140,8 @@ export function Inicio({ menu }: InicioProps) {
         </section>
         <section className="experiencias" id="actividades">
           <h1 className="titleref" ref={titleRef}>
-            ¿Qué podés hacer en Cura Brochero?
+            ¿Qué podés hacer en{" "}
+            <span className="title-inicio">Cura Brochero?</span>
           </h1>
           <ul className="lista-actividades">
             <li>

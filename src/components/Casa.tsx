@@ -102,13 +102,13 @@ const mobileImages = [
   },
   {
     key: 7,
-    src: "/public/images/Galeria/casa_hab_2.1.webp",
+    src: "/public/images/Galeria/cas_hab_2.webp",
     alt: "Habitacion b",
     loading: "lazy",
   },
   {
     key: 8,
-    src: "/public/images/Galeria/casa_hab_2.2.webp",
+    src: "/public/images/Galeria/cas_hab_2.1.webp",
     alt: "Habitacion b",
     loading: "lazy",
   },
@@ -193,7 +193,7 @@ export function Casa({ menu }: CasaProps) {
               <li>
                 <h3>Horario de ingreso y salida</h3>
                 <p>
-                  - Check-in: desde las 10:00 hs <br></br> - Check-out: hasta
+                  - Check-in: desde las 10:00 hs. <br></br> - Check-out: hasta
                   las 13:00 hs.
                 </p>
               </li>
@@ -225,7 +225,7 @@ export function Casa({ menu }: CasaProps) {
               <li>
                 <h3>Precios</h3>
                 <p>- Para 6 personas: $132.000 por día.</p>
-                <p>-Para 8 personas: $176.000 por día</p>
+                <p>- Para 8 personas: $176.000 por día.</p>
               </li>
             </ul>
           </section>

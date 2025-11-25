@@ -186,19 +186,19 @@ export function Duplex({ menu }: DuplexProps) {
               <li>
                 <h3>Horario de ingreso y salida</h3>
                 <p>
-                  - Check-in: desde las 10:00 hs <br></br> - Check-out: hasta
-                  las 13:00 hs
+                  - Check-in: desde las 10:00 hs. <br></br> - Check-out: hasta
+                  las 13:00 hs.
                 </p>
               </li>
               <li>
                 <h3>Politica de mascotas</h3>
-                <p>- Se aceptan mascotas pequeñas</p>
+                <p>- Se aceptan mascotas pequeñas.</p>
               </li>
               <li>
                 <h3>Condiciones básicas de reserva</h3>
                 <p>
                   - Precio por persona <br></br> - Seña del 30% para confirmar
-                  reserva
+                  reserva.
                 </p>
               </li>
               <li>
@@ -225,10 +225,10 @@ export function Duplex({ menu }: DuplexProps) {
             <p className="description-duplex">
               Mirá nuestros videos en Facebook y recorré cada rincón de nuestro
               duplex. Te mostramos cómo es por dentro, sus vistas, comodidades y
-              el entorno natural que lo rodea 🌿
+              el entorno natural que lo rodea. 🌿
             </p>
             <a
-              href="https://www.facebook.com/share/v/1WdhPuSRis/"
+              href="https://www.facebook.com/media/set/?vanity=100063737036623&set=a.1403982735069614"
               target="_blank"
               className="btn-facebook"
             >
