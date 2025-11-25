@@ -59,7 +59,7 @@ export default function FacebookVideo({ isOpenVideo, onClose }: ReservaVideo) {
         <button className="close_button" onClick={onClose}>
           <img
             className="close_button_img"
-            src="/public/images/cancel_circle_close_delete_discard_file_x_icon_123219.svg"
+            src="images/cancel_circle_close_delete_discard_file_x_icon_123219.svg"
             alt="cerrar"
           />
         </button>

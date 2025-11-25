@@ -101,13 +101,13 @@ const mobileImages = [
   },
   {
     key: 7,
-    src: "images/Galeria/cas_hab_2.webp",
+    src: "images/Galeria/hab_2_1.webp",
     alt: "Habitacion b",
     loading: "lazy",
   },
   {
     key: 8,
-    src: "images/Galeria/cas_hab_2.1.webp",
+    src: "images/Galeria/hab_2_2.webp",
     alt: "Habitacion b",
     loading: "lazy",
   },
