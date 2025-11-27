@@ -34,7 +34,7 @@ export function Footer() {
           </a>
           <a
             className="social-icon facebook"
-            href="https://www.facebook.com/profile.php?id=100063737036623"
+            href="https://www.facebook.com/MiBuenDespertar/"
             target="_blank"
             rel="noopener noreferrer"
           >

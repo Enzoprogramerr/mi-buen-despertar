@@ -227,7 +227,7 @@ export function Duplex({ menu }: DuplexProps) {
               el entorno natural que lo rodea. 🌿
             </p>
             <a
-              href="https://www.facebook.com/media/set/?vanity=100063737036623&set=a.1403982735069614"
+              href="https://www.facebook.com/MiBuenDespertar/"
               target="_blank"
               className="btn-facebook"
             >
