@@ -17,7 +17,7 @@ export function HeaderMobile({ menu, setMenu }: HeaderProps) {
       <Link to="/">
         <img
           className="logo_img"
-          src="/public/images/android-chrome-512x512.png"
+          src="images/android-chrome-512x512.png"
           alt="icono de la página"
         />
       </Link>

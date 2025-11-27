@@ -443,6 +443,11 @@ section {
   color: white;
 }
 
+.social_red {
+  height: 3rem;
+  width: 3rem;
+}
+
 .carousel-status {
   display: none;
 }
