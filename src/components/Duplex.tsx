@@ -185,8 +185,8 @@ export function Duplex({ menu }: DuplexProps) {
               <li>
                 <h3>Horario de ingreso y salida</h3>
                 <p>
-                  - Check-in: desde las 10:00 hs. <br></br> - Check-out: hasta
-                  las 13:00 hs.
+                  - Check-in: desde las 13:00 hs. <br></br> - Check-out: hasta
+                  las 10:00 hs.
                 </p>
               </li>
               <li>
