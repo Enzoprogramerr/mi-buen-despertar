@@ -19,28 +19,28 @@ export function Inicio({ menu }: InicioProps) {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
           observer.unobserve(
-            entry.target
+            entry.target,
           ); /* Esta línea le dice al IntersectionObserver que deje de 
           observar el elemento que acaba de entrar en el viewport. */
         }
       },
       {
-        threshold: 0.3,
-      } /*  significa que se activa cuando al menos el 30% del iframe es visible en pantalla. */
+        threshold: 0.2,
+      } /*  significa que se activa cuando al menos el 20% del iframe es visible en pantalla. */,
     );
     const observerTitle = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
           observer.unobserve(
-            entry.target
+            entry.target,
           ); /* Esta línea le dice al IntersectionObserver que deje de 
           observar el elemento que acaba de entrar en el viewport. */
         }
       },
       {
         threshold: 0.1,
-      } /*  significa que se activa cuando al menos el 30% del iframe es visible en pantalla. */
+      } /*  significa que se activa cuando al menos el 30% del iframe es visible en pantalla. */,
     );
     if (mapRef.current) {
       observer.observe(mapRef.current);

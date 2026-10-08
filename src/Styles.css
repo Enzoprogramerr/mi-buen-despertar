@@ -69,6 +69,19 @@ section {
   justify-content: space-between;
   min-height: 4rem;
   padding: 0.5rem;
+  background-image: url(/public/images/Galeria/header-transparente.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 1rem 10px;
+  padding-top: 1.5rem;
+}
+
+.header-button {
+  padding: 1rem;
+  color: transparent;
+  position: relative;
+  left: 10px;
+  width: 28%;
 }
 
 .navbar-button.active {
@@ -268,7 +281,9 @@ section {
 .map {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out,
     box-shadow 1s ease-in-out;
   border-radius: 0.5rem;
   box-shadow: none;
@@ -280,7 +295,9 @@ section {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.5s;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 20px 20px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(255, 255, 255, 0.4);
 }
 
 .subtitle {
@@ -301,7 +318,9 @@ section {
 .carrousel_conten {
   min-height: 45rem;
   padding-top: 1rem;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 20px 20px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(255, 255, 255, 0.4);
   height: 100%;
 }
 
@@ -334,7 +353,9 @@ section {
 .titleref {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out,
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out,
     box-shadow 1s ease-in-out;
   text-align: center;
 }
@@ -533,7 +554,9 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   text-align: center;
   letter-spacing: 0.4px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 .mobile-reservation-button:hover {
@@ -717,7 +740,9 @@ section {
   font-weight: 600;
   font-size: var(--font-small);
   margin: 1rem;
-  transition: background 0.3s ease, transform 0.1s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.1s ease;
   cursor: pointer;
 }
 
@@ -936,7 +961,9 @@ section {
     background-color: rgba(0, 0, 0, 0.25);
     padding: 0.5rem 1rem;
     border-radius: 8px;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      opacity 0.3s ease;
   }
 
   .container-image {

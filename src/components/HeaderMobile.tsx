@@ -14,12 +14,8 @@ export function HeaderMobile({ menu, setMenu }: HeaderProps) {
 
   return (
     <div className="header">
-      <Link to="/">
-        <img
-          className="logo_img"
-          src="images/android-chrome-512x512.png"
-          alt="icono de la página"
-        />
+      <Link className="header-button" to="/">
+        INICIO
       </Link>
 
       <BotonHamburguesa menu={menu} toggleMenu={toggleMenu} />
