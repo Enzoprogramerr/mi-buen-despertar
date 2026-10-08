@@ -2,12 +2,12 @@ export function Footer() {
   return (
     <footer id="contacto" className="footer">
       <div className="footer_one">
-        <h4>MI BUEN DESPERTAR</h4>
+        {/* <h4>MI BUEN DESPERTAR</h4>
         <p>Cabaña y duplex de campo en las Sierras de Córdoba.</p>
         <p>🌿 Despertá rodeado de naturaleza y tranquilidad.</p>
         <p>
           📍 Ubicación: Juan Manuel De Rosas 662, Villa Cura Brochero, Córdoba.
-        </p>
+        </p> */}
         <a
           href="https://wa.me/5493515488289"
           target="_blank"
