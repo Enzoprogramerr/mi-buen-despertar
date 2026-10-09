@@ -100,7 +100,7 @@ const duplexImage = [
   {
     key: 7,
     src: "images/Galeria/depto_baño_1.1.webp",
-    alt: "",
+    alt: "Baño",
     loading: "lazy",
   },
   {
@@ -220,7 +220,7 @@ export function Duplex({ menu }: DuplexProps) {
                 <h3>Al reservar</h3>
                 <p>
                   - Al realizar la reserva de nuestros servicios, el cliente
-                  acepta y reconoce todos los
+                  acepta y reconoce todos los{" "}
                   <Link to="/terminos">Términos y condiciones.</Link>
                 </p>
                 <p>

@@ -44,9 +44,9 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     };
   }, []);
 
-  const handleMouseMove = (event: React.MouseEvent) => {
+  /* const handleMouseMove = (event: React.MouseEvent) => {
     const el = slideRef.current;
-    if (!el) return;
+    if (!el) return; 
 
     const r = el.getBoundingClientRect();
     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
@@ -56,7 +56,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const handleMouseLeave = () => {
     xRef.current = 0;
     yRef.current = 0;
-  };
+  };*/
 
   const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
     event.currentTarget.style.opacity = "1";
@@ -70,8 +70,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         ref={slideRef}
         className=" container-image flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
         onClick={() => handleSlideClick(index)}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
+        /* onMouseMove={handleMouseMove} */
+        /* onMouseLeave={handleMouseLeave} */
         style={{
           transform:
             current !== index

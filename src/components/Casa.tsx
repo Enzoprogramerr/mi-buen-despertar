@@ -191,7 +191,7 @@ export function Casa({ menu }: CasaProps) {
             tipo="casa"
           ></Reserva>
         </section>
-        <h1 className="title_services">Servicios</h1>
+        <h1 className="title_services">- Servicios -</h1>
         <section className="description-services">
           {serviciosCasa.map((e, i) => (
             <article key={i} className="element">
@@ -203,7 +203,7 @@ export function Casa({ menu }: CasaProps) {
         </section>
         <div className="info_container">
           <section className="info_important">
-            <h1 className="title_service2">Información Importante</h1>
+            <h1 className="title_service2">- Información Importante -</h1>
             <ul>
               <li>
                 <h3>Horario de ingreso y salida</h3>
@@ -258,7 +258,7 @@ export function Casa({ menu }: CasaProps) {
           onClose={toggleVideo}
         ></VideoFacebook>
         <section className="calendar-container">
-          <h2>Calendario de disponibilidad</h2>
+          <h2>- Calendario de disponibilidad -</h2>
           <CalendarGoogle />
           <p className="info_calendar">
             - Las fechas marcadas en color indican que ya han sido reservadas y
