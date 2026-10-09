@@ -65,7 +65,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const { src, alt, key } = slide;
 
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
+    <div className="[perspective:3000px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
         className=" container-image flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
@@ -148,23 +148,44 @@ interface CarouselProps {
 }
 
 export function Carousel({ slides }: CarouselProps) {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
+  const [animate, setAnimate] = useState(true);
+
+  const displayedSlides = [slides[slides.length - 1], ...slides, slides[0]];
 
   const handlePreviousClick = () => {
-    const previous = current - 1;
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
+    setCurrent((prev) => prev - 1);
   };
 
   const handleNextClick = () => {
-    const next = current + 1;
-    setCurrent(next === slides.length ? 0 : next);
+    setCurrent((prev) => prev + 1);
   };
 
   const handleSlideClick = (index: number) => {
-    if (current !== index) {
+    if (index === 0) {
+      setCurrent(slides.length);
+    } else if (index === slides.length + 1) {
+      setCurrent(1);
+    } else {
       setCurrent(index);
     }
   };
+
+  useEffect(() => {
+    if (!animate) {
+      requestAnimationFrame(() => {
+        setAnimate(true);
+      });
+    }
+  }, [animate]);
+
+  useEffect(() => {
+    if (!animate) {
+      requestAnimationFrame(() => {
+        setAnimate(true);
+      });
+    }
+  }, [animate]);
 
   const id = useId();
 
@@ -174,14 +195,25 @@ export function Carousel({ slides }: CarouselProps) {
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className={`absolute flex mx-[-4vmin] ${
+          animate ? "transition-transform duration-1000 ease-in-out" : ""
+        }`}
         style={{
-          transform: `translateX(-${current * (100 / slides.length)}%)`,
+          transform: `translateX(-${current * (100 / displayedSlides.length)}%)`,
+        }}
+        onTransitionEnd={() => {
+          if (current === displayedSlides.length - 1) {
+            setAnimate(false);
+            setCurrent(1);
+          } else if (current === 0) {
+            setAnimate(false);
+            setCurrent(slides.length);
+          }
         }}
       >
-        {slides.map((slide, index) => (
+        {displayedSlides.map((slide, index) => (
           <Slide
-            key={index}
+            key={`${slide.key}-${index}`}
             slide={slide}
             index={index}
             current={current}
@@ -196,7 +228,6 @@ export function Carousel({ slides }: CarouselProps) {
           title="Go to previous slide"
           handleClick={handlePreviousClick}
         />
-
         <CarouselControl
           type="next"
           title="Go to next slide"
