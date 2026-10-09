@@ -188,6 +188,7 @@ export function Casa({ menu }: CasaProps) {
             isOpen={isOpen}
             onClose={toggleReserva}
             fullMessage={sendWP}
+            tipo="casa"
           ></Reserva>
         </section>
         <h1 className="title_services">Servicios</h1>
@@ -279,6 +280,7 @@ export function Casa({ menu }: CasaProps) {
             isOpen={isOpen}
             onClose={toggleReserva}
             fullMessage={sendWP}
+            tipo="casa"
           ></Reserva>
         </section>
       </div>

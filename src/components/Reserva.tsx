@@ -5,12 +5,14 @@ interface ReservaProps {
   isOpen: boolean;
   onClose: () => void;
   fullMessage: (mensajefinal: string) => void;
+  tipo: string;
 }
 
 export default function Reserva({
   isOpen,
   onClose,
   fullMessage,
+  tipo,
 }: ReservaProps) {
   if (!isOpen) return null;
 
@@ -23,7 +25,7 @@ export default function Reserva({
   });
 
   const sendMessage = () => {
-    const message = `Hola, quiero reservar en Mi Buen Despertar.
+    const message = `Hola, quiero reservar ${tipo} de Mi Buen Despertar.
     Nombre: ${messageData.nombre} ${messageData.apellido}
     Somos ${messageData.personas} personas
     Ingreso: ${messageData.ingreso}

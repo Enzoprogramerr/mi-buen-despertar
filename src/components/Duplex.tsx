@@ -181,6 +181,7 @@ export function Duplex({ menu }: DuplexProps) {
             isOpen={isOpen}
             onClose={toggleReserva}
             fullMessage={sendWP}
+            tipo="duplex"
           ></Reserva>
         </section>
         <h1 className="title_services">Servicios</h1>
@@ -272,6 +273,7 @@ export function Duplex({ menu }: DuplexProps) {
               isOpen={isOpen}
               onClose={toggleReserva}
               fullMessage={sendWP}
+              tipo="duplex"
             ></Reserva>
           </section>
         </div>
