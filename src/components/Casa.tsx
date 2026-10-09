@@ -6,7 +6,6 @@ import "../Styles.css";
 import CalendarGoogle from "./CalendarGoogle";
 import Reserva from "./Reserva";
 import { Link } from "react-router-dom";
-import VideoFacebook from "./VideoFacebook";
 
 const serviciosCasa = [
   {
@@ -137,12 +136,6 @@ interface CasaProps {
 
 export function Casa({ menu }: CasaProps) {
   const isMobile = useIsMobile();
-
-  const [isOpenVideo, setOpenVideo] = useState(false);
-  const toggleVideo = () => {
-    setOpenVideo(!isOpenVideo);
-  };
-
   const [isOpen, setOpen] = useState(false);
 
   const toggleReserva = () => {
@@ -244,19 +237,22 @@ export function Casa({ menu }: CasaProps) {
               </li>
             </ul>
           </section>
+          <section className="video_facebook">
+            <h2 className="title-duplex">Descubrí la casa en detalle</h2>
+            <p className="description-duplex">
+              Mirá nuestros videos publicados en Facebook y recorré cada rincón
+              de nuestro alojamiento. Te mostramos cómo es por dentro, sus
+              vistas, comodidades y el entorno natural que lo rodea. 🌿
+            </p>
+            <a
+              href="https://www.facebook.com/MiBuenDespertar/"
+              target="_blank"
+              className="btn-facebook"
+            >
+              Ver videos en Facebook
+            </a>
+          </section>
         </div>
-        <button
-          className={`send_button ${isOpenVideo ? "hiden" : ""}`}
-          onClick={() => {
-            setOpenVideo(!isOpenVideo);
-          }}
-        >
-          Ver video de casa
-        </button>
-        <VideoFacebook
-          isOpenVideo={isOpenVideo}
-          onClose={toggleVideo}
-        ></VideoFacebook>
         <section className="calendar-container">
           <h2>- Calendario de disponibilidad -</h2>
           <CalendarGoogle />

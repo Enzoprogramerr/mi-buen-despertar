@@ -184,7 +184,7 @@ export function Duplex({ menu }: DuplexProps) {
             tipo="duplex"
           ></Reserva>
         </section>
-        <h1 className="title_services">Servicios</h1>
+        <h1 className="title_services">- Servicios -</h1>
         <section className="description-services">
           {serviciosDuplex.map((e, i) => (
             <article key={i} className="element">
@@ -196,7 +196,7 @@ export function Duplex({ menu }: DuplexProps) {
         </section>
         <div className="info_container">
           <section className="info_important">
-            <h1 className="title_service2">Información Importante</h1>
+            <h1 className="title_service2">- Información Importante -</h1>
             <ul>
               <li>
                 <h3>Horario de ingreso y salida</h3>
@@ -238,9 +238,9 @@ export function Duplex({ menu }: DuplexProps) {
           <section className="video_facebook">
             <h2 className="title-duplex">Descubrí el duplex en detalle</h2>
             <p className="description-duplex">
-              Mirá nuestros videos en Facebook y recorré cada rincón de nuestro
-              duplex. Te mostramos cómo es por dentro, sus vistas, comodidades y
-              el entorno natural que lo rodea. 🌿
+              Mirá nuestros videos publicados en Facebook y recorré cada rincón
+              de nuestro duplex. Te mostramos cómo es por dentro, sus vistas,
+              comodidades y el entorno natural que lo rodea. 🌿
             </p>
             <a
               href="https://www.facebook.com/MiBuenDespertar/"
@@ -251,7 +251,7 @@ export function Duplex({ menu }: DuplexProps) {
             </a>
           </section>
           <section className="calendar-container">
-            <h2>Calendario de disponibilidad</h2>
+            <h2>- Calendario de disponibilidad -</h2>
             <CalendarDuplex />
             <p className="info_calendar">
               - Las fechas marcadas en color indican que ya han sido reservadas
