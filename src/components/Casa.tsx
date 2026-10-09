@@ -175,6 +175,21 @@ export function Casa({ menu }: CasaProps) {
             <Carousel slides={mobileImages} />
           )}
         </section>
+        <section className="popup">
+          <button
+            className={`mobile-reservation-button ${isOpen ? "hiden" : ""}`}
+            onClick={() => {
+              setOpen(!isOpen);
+            }}
+          >
+            RESERVAR - ENVIAR WHATSAPP
+          </button>
+          <Reserva
+            isOpen={isOpen}
+            onClose={toggleReserva}
+            fullMessage={sendWP}
+          ></Reserva>
+        </section>
         <h1 className="title_services">Servicios</h1>
         <section className="description-services">
           {serviciosCasa.map((e, i) => (

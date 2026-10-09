@@ -168,6 +168,21 @@ export function Duplex({ menu }: DuplexProps) {
             <Carousel slides={duplexImage} />
           )}
         </section>
+        <section className="popup">
+          <button
+            className={`mobile-reservation-button ${isOpen ? "hiden" : ""}`}
+            onClick={() => {
+              setOpen(!isOpen);
+            }}
+          >
+            RESERVAR - ENVIAR WHATSAPP
+          </button>
+          <Reserva
+            isOpen={isOpen}
+            onClose={toggleReserva}
+            fullMessage={sendWP}
+          ></Reserva>
+        </section>
         <h1 className="title_services">Servicios</h1>
         <section className="description-services">
           {serviciosDuplex.map((e, i) => (
