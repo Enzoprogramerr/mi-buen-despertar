@@ -23,12 +23,14 @@ function Layout({ children }: LayoutProps) {
   return (
     <div className="cont_principal">
       {isMobile ? (
-        <HeaderMobile menu={menu} setMenu={setMenu} />
+        <>
+          <HeaderMobile menu={menu} setMenu={setMenu} />
+          <Navbar menu={menu} setMenu={setMenu} />
+        </>
       ) : (
         <HeaderDesktop />
       )}
       <div className="cont_inicio">
-        <Navbar menu={menu} setMenu={setMenu} />
         <main>{children({ menu })}</main>
       </div>
       <Footer />
