@@ -13,6 +13,8 @@ export function Inicio({ menu }: InicioProps) {
   useScrollToHash();
   const mapRef = useRef<HTMLIFrameElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const galeryRef = useRef<HTMLIFrameElement | null>(null);
+  const actividadesRef = useRef<HTMLUListElement | null>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -25,7 +27,7 @@ export function Inicio({ menu }: InicioProps) {
         }
       },
       {
-        threshold: 0.2,
+        threshold: 0,
       } /*  significa que se activa cuando al menos el 20% del iframe es visible en pantalla. */,
     );
     const observerTitle = new IntersectionObserver(
@@ -39,15 +41,49 @@ export function Inicio({ menu }: InicioProps) {
         }
       },
       {
-        threshold: 0.1,
+        threshold: 0.5,
       } /*  significa que se activa cuando al menos el 30% del iframe es visible en pantalla. */,
     );
-    if (mapRef.current) {
-      observer.observe(mapRef.current);
-    }
+
+    const lista = actividadesRef.current;
+
+    if (!lista) return;
+
     if (titleRef.current) {
       observerTitle.observe(titleRef.current);
     }
+
+    const elementos = lista.querySelectorAll("li");
+
+    // Activamos las animaciones solamente si JavaScript está funcionando.
+    lista.classList.add("animaciones-activas");
+
+    const observerB = new IntersectionObserver(
+      (entradas, observerActual) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add("visible");
+            observerActual.unobserve(entrada.target);
+          }
+        });
+      },
+      {
+        threshold: 0.25,
+      },
+    );
+
+    elementos.forEach((elemento, indice) => {
+      elemento.style.transitionDelay = `${indice * 150}ms`;
+      observerB.observe(elemento);
+    });
+
+    if (galeryRef.current) {
+      observer.observe(galeryRef.current);
+    }
+    if (mapRef.current) {
+      observer.observe(mapRef.current);
+    }
+
     return () => observer.disconnect();
   }, []);
 
@@ -118,19 +154,19 @@ export function Inicio({ menu }: InicioProps) {
         <div className="subtitle">
           <h1>Un adelanto de tu estadía</h1>
         </div>
-        <section className="galery">
+        <section className="galery" ref={galeryRef}>
           {isMobile ? (
             <CarouselMobile images={desktopImages} />
           ) : (
             <Carousel slides={desktopImages} />
           )}
         </section>
-        <section id="ubi" className="map-section">
+        <section id="ubi" className="map-section" /* ref={mapRef} */>
           <h1 className="map-title">
             Ubicación de <span className="title-inicio">Mi Buen Despertar</span>
           </h1>
           <iframe
-            ref={mapRef}
+            /* ref={mapRef} */
             className="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.11458186575!2d-65.01456572539695!3d-31.712764874126524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d27c36dc9109d%3A0xc33b78f3fd0d1c5e!2sMi%20Buen%20Despertar!5e0!3m2!1sfr!2sar!4v1751650779068!3m2!1ses!2sar"
             allow="fullscreen"
@@ -143,7 +179,7 @@ export function Inicio({ menu }: InicioProps) {
             ¿Qué podés hacer en{" "}
             <span className="title-inicio">Cura Brochero?</span>
           </h1>
-          <ul className="lista-actividades">
+          <ul className="lista-actividades" ref={actividadesRef}>
             <li>
               <h3>🌊 Balnearios naturales</h3>
               <p>

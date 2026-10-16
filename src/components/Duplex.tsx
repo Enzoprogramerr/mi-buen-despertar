@@ -2,9 +2,10 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { CarouselMobile } from "./CarouselMobile";
 import { Carousel } from "./Carousel";
 import CalendarDuplex from "./CalendarDuplex";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Reserva from "./Reserva";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const serviciosDuplex = [
   {
@@ -134,6 +135,7 @@ interface DuplexProps {
 }
 
 export function Duplex({ menu }: DuplexProps) {
+  const galeryRef = useRef<HTMLDivElement | null>(null);
   const isMobile = useIsMobile();
 
   const [isOpen, setOpen] = useState(false);
@@ -148,6 +150,24 @@ export function Duplex({ menu }: DuplexProps) {
     window.open(url, "_blank");
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0,
+      },
+    );
+    if (galeryRef.current) {
+      observer.observe(galeryRef.current);
+      return () => observer.disconnect();
+    }
+  }, []);
+
   return (
     <>
       <div className={`inicio ${menu ? "active" : ""}`}>
@@ -161,7 +181,7 @@ export function Duplex({ menu }: DuplexProps) {
             reconectar con la naturaleza y descansar profundamente.
           </h4>
         </section>
-        <section className="galery">
+        <section className="galery" ref={galeryRef}>
           {isMobile ? (
             <CarouselMobile images={duplexImage} />
           ) : (

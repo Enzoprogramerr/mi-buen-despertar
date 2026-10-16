@@ -6,6 +6,8 @@ import "../Styles.css";
 import CalendarGoogle from "./CalendarGoogle";
 import Reserva from "./Reserva";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const serviciosCasa = [
   {
@@ -135,6 +137,7 @@ interface CasaProps {
 }
 
 export function Casa({ menu }: CasaProps) {
+  const galeryRef = useRef<HTMLDivElement | null>(null);
   const isMobile = useIsMobile();
   const [isOpen, setOpen] = useState(false);
 
@@ -147,6 +150,24 @@ export function Casa({ menu }: CasaProps) {
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0,
+      },
+    );
+    if (galeryRef.current) {
+      observer.observe(galeryRef.current);
+      return () => observer.disconnect();
+    }
+  }, []);
 
   return (
     <>
@@ -161,7 +182,7 @@ export function Casa({ menu }: CasaProps) {
             reconectar con la naturaleza y descansar profundamente.
           </h4>
         </section>
-        <section className="galery">
+        <section className="galery" ref={galeryRef}>
           {isMobile ? (
             <CarouselMobile images={mobileImages} />
           ) : (

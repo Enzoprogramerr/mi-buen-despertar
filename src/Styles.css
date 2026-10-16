@@ -24,6 +24,11 @@ body {
   font-family: Roboto;
   overflow-x: hidden;
 }
+
+html.menu-abierto {
+  overflow: hidden;
+}
+
 p {
   font-family: Roboto;
 }
@@ -46,6 +51,7 @@ a {
   font-size: var(--font-title);
   color: #212529;
   line-height: normal;
+  padding: var(--space-xl);
 }
 
 .inicio h2 {
@@ -112,7 +118,7 @@ section {
 }
 
 .navbar {
-  max-width: 0;
+  /*  max-width: 0;
   position: absolute !important;
   top: 65px;
   right: 0;
@@ -120,7 +126,18 @@ section {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; */
+  position: fixed !important;
+  right: 0;
+  width: 50%;
+  height: calc(100dvh - 65px);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  visibility: hidden;
+  box-sizing: border-box;
+  flex-direction: column;
   justify-content: flex-start;
+  z-index: 9999;
 }
 
 .inicio {
@@ -133,9 +150,11 @@ section {
 }
 
 .navbar.active {
-  max-width: 50%;
-  z-index: 9999;
+  /* max-width: 50%;
+  z-index: 9999; */
   background-color: #c9bf9b;
+  transform: translateX(0);
+  visibility: visible;
 }
 
 .navbar-ul {
@@ -274,6 +293,36 @@ section {
   display: block;
 }
 
+.galery {
+  /* opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out,
+    box-shadow 1s ease-in-out;
+  border-radius: 0.5rem;
+  box-shadow: none; */
+  opacity: 0;
+  transform: scale(0.97);
+
+  transition:
+    opacity 900ms ease-out,
+    transform 900ms ease-out;
+}
+
+.galery.visible {
+  /*   height: 20rem;
+  width: 90%; */
+  /* opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s; */
+  /*  box-shadow:
+    0 20px 20px rgba(0, 0, 0, 0.25),
+    0 0 1px rgba(255, 255, 255, 0.4); */
+  opacity: 1;
+  transform: scale(1);
+}
+
 .map-section {
   height: max-content;
   display: flex;
@@ -281,6 +330,18 @@ section {
   align-items: center;
   gap: 1rem;
   padding: var(--space-md);
+  /* opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out,
+    box-shadow 1s ease-in-out; */
+}
+
+.map-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
 }
 
 .map-title {
@@ -291,16 +352,18 @@ section {
 }
 
 .map {
-  opacity: 0;
+  /*  opacity: 0;
   transform: translateY(50px);
   transition:
     opacity 1.5s ease-in-out,
     transform 1.5s ease-in-out,
     box-shadow 1s ease-in-out;
   border-radius: 0.5rem;
-  box-shadow: none;
+  box-shadow: none; */
+  height: 20rem;
+  width: 90%;
 }
-
+/* 
 .map.visible {
   height: 20rem;
   width: 90%;
@@ -310,7 +373,7 @@ section {
   box-shadow:
     0 20px 20px rgba(0, 0, 0, 0.25),
     0 0 1px rgba(255, 255, 255, 0.4);
-}
+} */
 
 .subtitle {
   text-align: center;
@@ -363,26 +426,36 @@ section {
 }
 
 .titleref {
-  opacity: 0;
-  transform: translateY(50px);
+  /*opacity: 0;
+   transform: translateY(50px);
   transition:
     opacity 1.5s ease-in-out,
     transform 1.5s ease-in-out,
-    box-shadow 1s ease-in-out;
+    box-shadow 1s ease-in-out; */
   text-align: center;
+  opacity: 0;
+  transform: translateX(-56px);
+
+  transition:
+    opacity 200ms ease-out,
+    transform 600ms ease-out;
 }
 
 .titleref.visible {
-  opacity: 1;
+  /* opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.5s;
+  transition-delay: 0.5s; */
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .lista-actividades {
   list-style: none;
   padding: 0;
   margin-top: 2rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -392,6 +465,7 @@ section {
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 50%;
 }
 
 .lista-actividades h3 {
@@ -403,6 +477,21 @@ section {
 .lista-actividades p {
   font-size: var(--font-base);
   color: #3f3f3f;
+}
+
+.lista-actividades.animaciones-activas li {
+  opacity: 0;
+  transform: translateX(-86px);
+
+  transition:
+    opacity 200ms ease-out,
+    transform 600ms;
+}
+
+/* Estado final */
+.lista-actividades.animaciones-activas li.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .wp-div {
@@ -519,6 +608,10 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.element:hover {
+  transform: scale(1.02);
 }
 
 .element h3 {
@@ -921,13 +1014,13 @@ section {
   }
 
   .galery {
-    margin: 3rem 0;
+    margin: 3rem 0 0 0;
     height: 54rem;
   }
 
   .map-section {
-    margin: 2rem;
-    padding: var(--space-xl) 0;
+    margin: 0 2rem 2rem 2rem;
+    padding: 0 0 var(--space-xl) 0;
   }
 
   .map-section .map {

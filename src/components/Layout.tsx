@@ -15,6 +15,14 @@ function Layout({ children }: LayoutProps) {
   const isMobile = useIsMobile();
 
   useEffect(() => {
+    document.documentElement.classList.toggle("menu-abierto", menu);
+
+    return () => {
+      document.documentElement.classList.remove("menu-abierto");
+    };
+  }, [menu]);
+
+  useEffect(() => {
     if (!isMobile) {
       setMenu(false);
     }
