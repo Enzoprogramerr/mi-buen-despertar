@@ -5,6 +5,7 @@ import { Navbar } from "./Nav";
 import Footer from "./Footer";
 import { useIsMobile } from "../hooks/useIsMobile";
 import "../Styles.css";
+import { useScrollToHash } from "../hooks/useScrollToHash";
 
 interface LayoutProps {
   children: (props: { menu: boolean }) => React.ReactNode;
@@ -13,6 +14,7 @@ interface LayoutProps {
 function Layout({ children }: LayoutProps) {
   const [menu, setMenu] = useState(false);
   const isMobile = useIsMobile();
+  useScrollToHash();
 
   useEffect(() => {
     document.documentElement.classList.toggle("menu-abierto", menu);

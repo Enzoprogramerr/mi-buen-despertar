@@ -219,7 +219,6 @@ export function Inicio({ menu }: InicioProps) {
         </section>
         <div className="wp-div">
           <a href="https://wa.me/3516457961">
-            <p>¿Dudas? Contáctenos...</p>
             <img className="wp-icon" src="images/whatsapp.svg" alt="Whatsapp" />
           </a>
         </div>

@@ -1,56 +1,37 @@
+import { Link } from "react-router-dom";
+
 export function Footer() {
   return (
-    <footer id="contacto" className="footer">
-      <div className="footer_one">
-        {/* <h4>MI BUEN DESPERTAR</h4>
-        <p>Cabaña y duplex de campo en las Sierras de Córdoba.</p>
-        <p>🌿 Despertá rodeado de naturaleza y tranquilidad.</p>
-        <p>
-          📍 Ubicación: Juan Manuel De Rosas 662, Villa Cura Brochero, Córdoba.
-        </p> */}
-        <a
-          href="https://wa.me/5493515488289"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📞 +54 9 351 5488289
-        </a>
-        <a href="mailto:contacto@mibuendespertar.com?subject=Reserva%20Mi%20Buen%20Despertar&body=Hola%2C%20quiero%20reservar%20una%20caba%C3%B1a.">
-          contacto@mibuendespertar.com
-        </a>
-        <div className="footer_social">
+    <footer id="contacto" /* className="footer" */>
+      <div className="footer">
+        <div className="footer-column">
+          <Link to="/terminos">Terminos y condiciones</Link>
+          <Link to="/terminos#preguntas-frecuentes">Preguntas frecuentes</Link>
+        </div>
+
+        <div className="footer-column">
+          <Link to="/quienes-somos">Quiénes somos</Link>
           <a
-            className="social-icon instagram"
-            href="https://www.instagram.com/mibuendespertar/"
+            href="https://www.google.com/maps/place/Mi+Buen+Despertar/@-31.7127649,-65.0145604,17z/data=!3m1!4b1!4m6!3m5!1s0x942d27c36dc9109d:0xc33b78f3fd0d1c5e!8m2!3d-31.7127649!4d-65.0119908!16s%2Fg%2F11j4s3b00t?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              className="social_red"
-              src="images/instagram.svg"
-              alt="Instagram"
-            />
-            Instagram
-          </a>
-          <a
-            className="social-icon facebook"
-            href="https://www.facebook.com/MiBuenDespertar/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="social_red"
-              src="images/facebook.svg"
-              alt="Facebook"
-            />
-            Facebook
+            Testimonios
           </a>
         </div>
-        <div className="footer__legal">
-          <p>
-            © {new Date().getFullYear()} MI BUEN DESPERTAR. Todos los derechos
-            reservados.
-          </p>
+
+        <div className="footer-column">
+          <p>Hablemos</p>
+          <a
+            href="https://wa.me/5493515488289"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            +54 9 351 5488289
+          </a>
+          <a href="mailto:contacto@mibuendespertar.com?subject=Reserva%20Mi%20Buen%20Despertar&body=Hola%2C%20quiero%20reservar%20una%20caba%C3%B1a.">
+            contacto@mibuendespertar.com
+          </a>
         </div>
       </div>
     </footer>

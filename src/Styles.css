@@ -294,14 +294,6 @@ section {
 }
 
 .galery {
-  /* opacity: 0;
-  transform: translateY(50px);
-  transition:
-    opacity 1.5s ease-in-out,
-    transform 1.5s ease-in-out,
-    box-shadow 1s ease-in-out;
-  border-radius: 0.5rem;
-  box-shadow: none; */
   opacity: 0;
   transform: scale(0.97);
 
@@ -311,14 +303,6 @@ section {
 }
 
 .galery.visible {
-  /*   height: 20rem;
-  width: 90%; */
-  /* opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s; */
-  /*  box-shadow:
-    0 20px 20px rgba(0, 0, 0, 0.25),
-    0 0 1px rgba(255, 255, 255, 0.4); */
   opacity: 1;
   transform: scale(1);
 }
@@ -426,12 +410,6 @@ section {
 }
 
 .titleref {
-  /*opacity: 0;
-   transform: translateY(50px);
-  transition:
-    opacity 1.5s ease-in-out,
-    transform 1.5s ease-in-out,
-    box-shadow 1s ease-in-out; */
   text-align: center;
   opacity: 0;
   transform: translateX(-56px);
@@ -442,9 +420,6 @@ section {
 }
 
 .titleref.visible {
-  /* opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s; */
   opacity: 1;
   transform: translateX(0);
 }
@@ -499,6 +474,11 @@ section {
   padding: var(--space-md);
   display: flex;
   justify-content: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.wp-div :hover {
+  transform: translateY(-4px);
 }
 
 .wp-div a {
@@ -506,11 +486,15 @@ section {
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  position: fixed;
+  bottom: 38px;
+  background-color: #57474763;
+  border-radius: 50px;
 }
 
 .wp-div p {
   font-size: var(--font-base);
-  color: #212529;
+  color: white;
   margin: 0;
 }
 
@@ -522,14 +506,84 @@ section {
   margin: 1rem;
 }
 
+.somos-contain {
+  padding: 0 1rem;
+}
+
+.somos-subtitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  transform: translateX(-56px);
+
+  transition:
+    opacity 600ms ease-out,
+    transform 800ms ease-out;
+}
+
+.somos-subtitle.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+figure img {
+  object-fit: cover;
+  width: 90%;
+  margin: 1rem 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 2s ease;
+}
+
+figure.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+figcaption {
+  font-family: serif;
+  font-size: var(--font-base);
+}
+
+blockquote,
+.google-op {
+  font-size: 1.4rem;
+}
+
 .footer {
-  background-color: #593203d1;
+  background-color: #203a43;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--space-md);
   font-size: var(--font-base);
+  justify-content: start;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer-column p {
+  margin: 0;
+  color: white;
 }
 
 .footer_social {
@@ -554,8 +608,10 @@ section {
 }
 
 .footer_one {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  grid-template-rows: auto; /* filas automáticas */
+  gap: 20px;
 }
 
 .footer_one a {
@@ -1045,13 +1101,6 @@ section {
     margin: 1rem 0;
   }
 
-  .wp-div a {
-    transition: transform 0.3s ease;
-  }
-  .wp-div a :hover {
-    transform: translateY(-4px);
-  }
-
   .block_title {
     margin: 5rem 0 0.5rem 0;
   }
@@ -1110,11 +1159,44 @@ section {
     height: 90%;
   }
 
-  /*
-  TODO-6 armar pdf de condiciones.
-  TODO-9 OPCION COLOR DE PAGINA #e7ab85
-  TODO-10 aplicar modal video a duplex.
-  */
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas */
+    background: #203a43;
+    color: #fff;
+    padding: 2rem;
+  }
+
+  .footer-column:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footer-column:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: #00c6ff;
+  }
+
+  .wp-div a {
+    bottom: 135px;
+  }
 }
 
 @media (max-width: 800px) {

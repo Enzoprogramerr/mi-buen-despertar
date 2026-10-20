@@ -63,7 +63,7 @@ export function Terminos({ menu }: TerminosProps) {
           </p>
         </section>
 
-        <section id="preguntas frecuentes">
+        <section id="preguntas-frecuentes">
           <h1>Preguntas frecuentes</h1>
           <h3>¿Ofrecen servicio de desayuno?</h3>
           <p>
