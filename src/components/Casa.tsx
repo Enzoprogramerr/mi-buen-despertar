@@ -253,8 +253,9 @@ export function Casa({ menu }: CasaProps) {
               </li>
               <li>
                 <h3>Precios</h3>
-                <p>- Para 6 personas: $132.000 por día.</p>
-                <p>- Para 8 personas: $176.000 por día.</p>
+                <p>-En noviembre se fijan precios de temporada.</p>
+                {/* <p>- Para 6 personas: $132.000 por día.</p>
+                <p>- Para 8 personas: $176.000 por día.</p> */}
               </li>
             </ul>
           </section>

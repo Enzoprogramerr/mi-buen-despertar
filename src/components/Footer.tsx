@@ -5,11 +5,39 @@ export function Footer() {
     <footer id="contacto" /* className="footer" */>
       <div className="footer">
         <div className="footer-column">
-          <Link to="/terminos">Terminos y condiciones</Link>
+          <div className="footer_social">
+            <a
+              className="social-icon instagram"
+              href="https://www.instagram.com/mibuendespertar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="social_red"
+                src="images/instagram.svg"
+                alt="Instagram"
+              ></img>
+              Instagram
+            </a>
+            <a
+              className="social-icon facebook"
+              href="https://www.facebook.com/MiBuenDespertar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="social_red"
+                src="images/facebook.svg"
+                alt="Facebook"
+              ></img>
+              Facebook
+            </a>
+          </div>
           <Link to="/terminos#preguntas-frecuentes">Preguntas frecuentes</Link>
         </div>
 
         <div className="footer-column">
+          <Link to="/terminos">Terminos y condiciones</Link>
           <Link to="/quienes-somos">Quiénes somos</Link>
           <a
             href="https://www.google.com/maps/place/Mi+Buen+Despertar/@-31.7127649,-65.0145604,17z/data=!3m1!4b1!4m6!3m5!1s0x942d27c36dc9109d:0xc33b78f3fd0d1c5e!8m2!3d-31.7127649!4d-65.0119908!16s%2Fg%2F11j4s3b00t?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D"

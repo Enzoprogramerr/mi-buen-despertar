@@ -152,7 +152,7 @@ export function Inicio({ menu }: InicioProps) {
           </div>
         </section>
         <div className="subtitle">
-          <h1>Un adelanto de tu estadía</h1>
+          <h1>-Un adelanto de tu estadía-</h1>
         </div>
         <section className="galery" ref={galeryRef}>
           {isMobile ? (
@@ -163,7 +163,8 @@ export function Inicio({ menu }: InicioProps) {
         </section>
         <section id="ubi" className="map-section" /* ref={mapRef} */>
           <h1 className="map-title">
-            Ubicación de <span className="title-inicio">Mi Buen Despertar</span>
+            -Ubicación de{" "}
+            <span className="title-inicio">Mi Buen Despertar-</span>
           </h1>
           <iframe
             /* ref={mapRef} */
@@ -180,35 +181,35 @@ export function Inicio({ menu }: InicioProps) {
             <span className="title-inicio">Cura Brochero?</span>
           </h1>
           <ul className="lista-actividades" ref={actividadesRef}>
-            <li>
+            <li className="actividad-balneario">
               <h3>🌊 Balnearios naturales</h3>
               <p>
-                Ríos cristalinos como Los Elefantes y El Perchel para relajarte
-                y disfrutar del paisaje serrano.
+                Ríos cristalinos como Los Elefantes, Balneario Nido Del Aguila
+                para relajarte y disfrutar del paisaje serrano.
               </p>
             </li>
-            <li>
+            <li className="actividad-cultura">
               <h3>🕍 Historia y cultura</h3>
               <p>
                 Visitá el Santuario del Cura Brochero y conocé su legado en la
                 Casa Museo y Parque Temático.
               </p>
             </li>
-            <li>
+            <li className="actividad-senderismo">
               <h3>🥾 Senderismo y cabalgatas</h3>
               <p>
                 Recorré los senderos serranos a pie o a caballo, ideales para
                 conectar con la naturaleza.
               </p>
             </li>
-            <li>
+            <li className="actividad-peñas">
               <h3>🎶 Peñas y gastronomía</h3>
               <p>
                 Viví la cultura local con música folclórica, cabrito a la llama
                 y dulces típicos.
               </p>
             </li>
-            <li>
+            <li className="actividad-excursiones">
               <h3>🦅 Excursiones cercanas</h3>
               <p>
                 Conocé el Museo Rocsen, el Dique La Viña o el Parque Quebrada

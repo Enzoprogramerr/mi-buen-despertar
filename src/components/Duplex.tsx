@@ -251,7 +251,7 @@ export function Duplex({ menu }: DuplexProps) {
               </li>
               <li>
                 <h3>Precios</h3>
-                <p>- Para 4 personas: $80.000 por día.</p>
+                <p>-En noviembre se fijan precios de temporada.</p>
               </li>
             </ul>
           </section>
