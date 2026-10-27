@@ -182,35 +182,35 @@ export function Inicio({ menu }: InicioProps) {
           </h1>
           <ul className="lista-actividades" ref={actividadesRef}>
             <li className="actividad-balneario">
-              <h3>🌊 Balnearios naturales</h3>
+              <h3>Balnearios naturales</h3>
               <p>
                 Ríos cristalinos como Los Elefantes, Balneario Nido Del Aguila
                 para relajarte y disfrutar del paisaje serrano.
               </p>
             </li>
             <li className="actividad-cultura">
-              <h3>🕍 Historia y cultura</h3>
+              <h3>Historia y cultura</h3>
               <p>
                 Visitá el Santuario del Cura Brochero y conocé su legado en la
                 Casa Museo y Parque Temático.
               </p>
             </li>
             <li className="actividad-senderismo">
-              <h3>🥾 Senderismo y cabalgatas</h3>
+              <h3>Senderismo y cabalgatas</h3>
               <p>
                 Recorré los senderos serranos a pie o a caballo, ideales para
                 conectar con la naturaleza.
               </p>
             </li>
             <li className="actividad-peñas">
-              <h3>🎶 Peñas y gastronomía</h3>
+              <h3>Peñas y gastronomía</h3>
               <p>
                 Viví la cultura local con música folclórica, cabrito a la llama
                 y dulces típicos.
               </p>
             </li>
             <li className="actividad-excursiones">
-              <h3>🦅 Excursiones cercanas</h3>
+              <h3>Excursiones cercanas</h3>
               <p>
                 Conocé el Museo Rocsen, el Dique La Viña o el Parque Quebrada
                 del Condorito.
